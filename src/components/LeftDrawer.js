@@ -28,11 +28,9 @@ class LeftDrawer extends Component {
         };
     };
     ToggleEvents() {
-        console.log(this.state)
         this.setState(state => ({
             showEvents: !state.showEvents
         }));
-        console.log(this.state)
     };
     render() {
         this.ToggleEvents = this.ToggleEvents.bind(this)

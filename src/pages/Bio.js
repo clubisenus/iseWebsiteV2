@@ -21,55 +21,64 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const Bio = (props) => (
+class Page extends React.Component {
+    constructor(props) {
+        super(props);
+        //this.state = {date: new Date()};
+    }
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
-        <TopBar />
-        <div id='main'>
-            <div class="inner">
-                <section>
-                    <header class="main">
-                        <h1>Upcoming Events</h1>
-                    </header>
-                    <div class="posts">
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
-                        <article>
-                            <div id="day">
-                                <a href={pageLinks.events.day} class="image"><img src={ISEDayPoster} alt="" /></a>
-                                <h3>ISE Day 2019</h3>
-                                <p>We're back again with this year's instalment of ISE Day! You know the drill: free buffet food and giveaways :) We will be selling ISE shirts too! Additionally, there will be department/SEP/Micron Internships & System Design Projects talks as well. Sign up now (so we know to cater more food)! </p>
-                                <ul class="actions">
-                                    <li><a href={pageLinks.signUps.day} class="button">Sign Up</a></li>
-                                </ul>
-                            </div>
-                        </article>
+    render() {
+        return (
 
-                        <article>
-                            <div id="night">
-                                <a href={pageLinks.events.night} class="image"><img src={ISENight} alt="" /></a>
-                                <h3>ISE Night is back!</h3>
-                                <p>This year's instalment of ISE Night ups the game... by 20 floors to be exact. Right in the middle of Singapore's business district, 360 Lounge is a modern oasis with an amazing view, tucked away on the 20th floor of Oxley Tower. Sign up now, and we'll see you there!</p>
-                                <ul class="actions">
-                                    <li><a href={pageLinks.signUps.night} class="button">Sign Up</a></li>
-                                </ul>
-                            </div>
-                        </article>
+            <div >
+                <LeftDrawer />
+                <TopBar />
+                <div id='main'>
+                    <div class="inner">
+                        <section>
+                            <header class="main">
+                                <h1>Upcoming Events</h1>
+                            </header>
+                            <div class="posts">
 
-                        <article>
-                            <div id="NC">
-                                <a href={pageLinks.events.cycling} class="image"><img src={ISENC2019} alt="" /></a>
-                                <h3>ISE Night Cycling</h3>
-                                <p>The annual ISE Night Cycling event is a long time favourite of ours! A night of fun, cycling, and laughter :) Join us in welcoming the freshman into the ISE family this year. An annual event definitely not to be missed! Limited edition Night Cycling shirt + drawstring bag (filled w goodies) for every participant! Sign up now!</p>
-                                <ul class="actions">
-                                    <li><a href={pageLinks.signUps.cycling} class="button">SIGN UP</a></li>
-                                </ul>
-                            </div>
-                        </article>
-                        {/*Update the rest as they are needed*/}
-                        {/*
+                                <article>
+                                    <div id="day">
+                                        <a href={pageLinks.events.day} class="image"><img src={ISEDayPoster} alt="" /></a>
+                                        <h3>ISE Day 2019</h3>
+                                        <p>We're back again with this year's instalment of ISE Day! You know the drill: free buffet food and giveaways :) We will be selling ISE shirts too! Additionally, there will be department/SEP/Micron Internships & System Design Projects talks as well. Sign up now (so we know to cater more food)! </p>
+                                        <ul class="actions">
+                                            <li><a href={pageLinks.signUps.day} class="button">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div id="night">
+                                        <a href={pageLinks.events.night} class="image"><img src={ISENight} alt="" /></a>
+                                        <h3>ISE Night is back!</h3>
+                                        <p>This year's instalment of ISE Night ups the game... by 20 floors to be exact. Right in the middle of Singapore's business district, 360 Lounge is a modern oasis with an amazing view, tucked away on the 20th floor of Oxley Tower. Sign up now, and we'll see you there!</p>
+                                        <ul class="actions">
+                                            <li><a href={pageLinks.signUps.night} class="button">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article>
+                                    <div id="NC">
+                                        <a href={pageLinks.events.cycling} class="image"><img src={ISENC2019} alt="" /></a>
+                                        <h3>ISE Night Cycling</h3>
+                                        <p>The annual ISE Night Cycling event is a long time favourite of ours! A night of fun, cycling, and laughter :) Join us in welcoming the freshman into the ISE family this year. An annual event definitely not to be missed! Limited edition Night Cycling shirt + drawstring bag (filled w goodies) for every participant! Sign up now!</p>
+                                        <ul class="actions">
+                                            <li><a href={pageLinks.signUps.cycling} class="button">SIGN UP</a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                {/*Update the rest as they are needed*/}
+                                {/*
                                         <article>
 											<a href="https://nusiseclub.com/welfare" class="image"><img src="images/pic04.jpg" alt="" /></a>
 											<h3>Welfare Giveaways</h3>
@@ -115,18 +124,19 @@ const Bio = (props) => (
 
 										</article>
 										*/}
+                            </div>
+                        </section>
                     </div>
-                </section>
+                </div>
             </div>
-        </div>
-    </div>
-)
-
+        )
+    }
+}
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(Bio)
+        )(Page)
     )
 )

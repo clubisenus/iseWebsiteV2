@@ -20,40 +20,51 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const NUSISEBACC = (props) => (
+class Page extends React.Component {
+    constructor(props) {
+        super(props);
+        //this.state = {date: new Date()};
+    }
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
-        <TopBar />
-        <div id='main'>
-            <div class="inner">
-                <section>
-                    <header class="main">
-                        <h1>NUS ISE BACC</h1>
-                    </header>
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
-                    <span class="image main"><img src={BACCbanner} alt="" /></span>
-                    <hr class="major" />
+    render() {
+        return (
 
-                    <h2>National University of Singapore Industrial & Systems Engineering Business Analytics Case Competition </h2>
-                    <p>that was really long</p>
+            <div >
+                <LeftDrawer />
+                <TopBar />
+                <div id='main'>
+                    <div class="inner">
+                        <section>
+                            <header class="main">
+                                <h1>NUS ISE BACC</h1>
+                            </header>
+
+                            <span class="image main"><img src={BACCbanner} alt="" /></span>
+                            <hr class="major" />
+
+                            <h2>National University of Singapore Industrial & Systems Engineering Business Analytics Case Competition </h2>
+                            <p>that was really long</p>
 
 
-                    <hr class="major" />
+                            <hr class="major" />
 
-                </section>
+                        </section>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-)
+        )
+    }
+}
 
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(NUSISEBACC)
+        )(Page)
     )
 )

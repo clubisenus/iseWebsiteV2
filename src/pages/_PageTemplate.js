@@ -8,7 +8,7 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
-import { iseclublogobanner } from '../resources/images';
+//import { iseclublogobanner } from '../resources/images';
 const mapStateToProps = state => {
     return {
         //state:state
@@ -20,28 +20,39 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const Home = (props) => (
+class Page extends React.Component {
+    constructor(props) {
+        super(props);
+        //this.state = {date: new Date()};
+    }
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
-        <TopBar />
-        <div id='main'>
-            <div class="inner">
-                <section>
-    
-                </section>
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
+    render() {
+        return (
+
+            <div >
+                <LeftDrawer/>
+                <TopBar />
+                <div id='main'>
+                    <div class="inner">
+                        <section>
+
+                        </section>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-)
+        )
+    }
+}
 
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(Home)
+        )(Page)
     )
 )

@@ -20,41 +20,51 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const Home = (props) => (
+class Page extends React.Component {
+    constructor(props) {
+        super(props);
+        //this.state = {date: new Date()};
+    }
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
-        <TopBar />
-        <div id='main'>
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
 
-            <div class="inner">
-                <section>
-                    <header class="main">
-                        <h1>Community Involvement Projects</h1>
-                    </header>
+    render() {
+        return (
 
-                    <span class="image main"><img src={CIP} alt="" /></span>
-                    <hr class="major" />
+            <div >
+                <LeftDrawer />
+                <TopBar />
+                <div id='main'>
 
-                    <h2>QUEENSTOWN</h2>
-                    <p>HUATZ</p>
+                    <div class="inner">
+                        <section>
+                            <header class="main">
+                                <h1>Community Involvement Projects</h1>
+                            </header>
+
+                            <span class="image main"><img src={CIP} alt="" /></span>
+                            <hr class="major" />
+
+                            <h2>QUEENSTOWN</h2>
+                            <p>HUATZ</p>
 
 
-                    <hr class="major" />
+                            <hr class="major" />
 
-                </section>
+                        </section>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-)
-
+        )
+    }
+}
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(Home)
+        )(Page)
     )
 )

@@ -1,13 +1,25 @@
 ISE Club Website running on:    
 React-Redux for global state    
-Material-UI for easy modular components 
+Material-UI for easy modular components   
 react-router-dom for page navigation    
 
-Git clone   
+environment setup   
+```git clone https://github.com/clubisenus/iseWebsiteV2.git``` to clone this repository   
 ```yarn``` in terminal to download dependencies     
-```yarn start``` to host local    
-Ideally test on a testing repo in between these two steps,maybe by pushing the code to your own github repo?      
-```yarn deploy``` to push to actual page (pls don't anyhow push without testing, it might break things)   
+start coding  
+
+pretesting    
+```git pull``` to check for pushed changes  
+``` git rebase``` to merge pushed changes under yours  
+
+testing   
+```yarn start``` to host localhost server to test changes
+```yarn run build:staging``` to build remote test build  
+```yarn run deploy:staging``` to deploy remote test build   
+check https://clubisenus.github.io/iseWebsiteV2_test for any issues in your build   
+```yarn run build:production``` to build remote test build  
+```yarn run deploy:production``` to deploy remote test build 
+check https://nusiseclub.com for any issues in your build   
 
 
 Notes:  
@@ -18,7 +30,3 @@ Notes:
 1) To create a new page, save _PageTemplate as a new file, update pageLinks.js link object and index.js routing
 
 1) Still a work in progress so please be nice
-
-package.json homepage field must be changed to hosting domain   
-i.e : https://user.github.io/repo for test   
-https://nusiseclub.com for deploy

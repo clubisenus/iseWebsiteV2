@@ -30,7 +30,6 @@ class DefaultButton extends Component {
             <Button variant='outlined' 
             class="button" 
             href={href}
-            onClick={console.log(this.props)}
             >
                 {contents}
               </Button>

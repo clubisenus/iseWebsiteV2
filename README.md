@@ -27,6 +27,8 @@ deploy to production
 ```yarn run build:production``` to build remote test build  
 ```yarn run deploy:production``` to deploy remote test build 
 check https://nusiseclub.com for any issues in your build   
+check that website is still pointing the the repo, otherwise change it in github pages settings   
+because still can't figure out how to do a dynamic CNAME file
 
 
 Notes:  

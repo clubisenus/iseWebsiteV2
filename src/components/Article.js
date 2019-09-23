@@ -29,14 +29,16 @@ class Article extends Component {
             title, body,
             buttonLink, buttonText
         } = this.props.articleprops
-
         
         return (
             <article>
                 <a href={pageLink} class="image"><img src={image} alt="" /></a>
                 <h3>{title}</h3>
                 <p>{body}</p>
-                <DefaultButton ButtonProps={{ href: buttonLink, contents: buttonText }}></DefaultButton>
+                {buttonText.length > 0
+                    ? <DefaultButton ButtonProps={{ href: buttonLink, contents: buttonText }}></DefaultButton>
+                    : null
+                }
             </article>
         )
     }

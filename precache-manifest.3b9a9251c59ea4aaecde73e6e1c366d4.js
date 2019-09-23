@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed16067945712ece0b9258fb06ff77b9",
+    "revision": "02213149e0f19bc95107a47c16eac128",
     "url": "https://nusiseclub.com/index.html"
   },
   {
-    "revision": "e261d84b9c49154197bc",
-    "url": "https://nusiseclub.com/static/js/2.a7babf1d.chunk.js"
+    "revision": "3f0ab7e0a3e02c4a3e3f",
+    "url": "https://nusiseclub.com/static/js/2.6c8eaf64.chunk.js"
   },
   {
-    "revision": "56fc48e4616ec1c9c6af",
-    "url": "https://nusiseclub.com/static/js/main.bae286d8.chunk.js"
+    "revision": "314807baa16930428f2e",
+    "url": "https://nusiseclub.com/static/js/main.3fb28b7c.chunk.js"
   },
   {
     "revision": "bcb0933cb510933a9d6d",

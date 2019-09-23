@@ -19,19 +19,24 @@ const mapDispatchToProps = dispatch => {
 class Article extends Component {
     constructor(props) {
         super(props);
-		this.state = {
+        this.state = {
             ...this.props.articleprops
-		};
+        };
     }
     render() {
-        console.log(this)
-        let { image,pageLink,title,body } = this.props.articleprops
+        let {
+            image, pageLink,
+            title, body,
+            buttonLink, buttonText
+        } = this.props.articleprops
+
+        
         return (
             <article>
-                  <a href={pageLink} class="image"><img src={image} alt="" /></a>
-                  <h3>{title}</h3>
-                  <p>{body}</p>
-                  <DefaultButton ButtonProps={{ href: pageLink, contents: "more" }}></DefaultButton>
+                <a href={pageLink} class="image"><img src={image} alt="" /></a>
+                <h3>{title}</h3>
+                <p>{body}</p>
+                <DefaultButton ButtonProps={{ href: buttonLink, contents: buttonText }}></DefaultButton>
             </article>
         )
     }

@@ -106,50 +106,79 @@ class Page extends React.Component {
                     , pageLink: pageLinks.events.foc
                     , title: "ISE Freshman Orientation Camp"
                     , body: "Every year, we welcome new freshman into our ISE family with a bang! The 4D3N camp, held on the last week of July, serves to introduce freshman into University life, and provides them with a strong support network of seniors and peers to ease their transition into NUS."
+                    , buttonLink:pageLinks.events.foc
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: pic02
                     , pageLink: pageLinks.events.day
                     , title: 'ISE Day'
                     , body: 'This is the day we take a break from lessons and gather for an afternoon of food and chilling! ISE Day is an annual two-part event. The first part consists of informative talks regarding VIP, SEP and NOC followed by a feedback and Q&A session with professors from the ISEM department. The second part is a get together sessions with food, games, giveaways, lucky draw and even performances!'
+                    , buttonLink:pageLinks.events.day
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: NC
                     , pageLink: pageLinks.events.cycling
                     , title: 'ISE Night Cycling'
                     , body: 'The annual ISE Night Cycling event is a long time favourite of the ISE ungraduate community. It also serves as a platform for seniors to interact and welcome juniors into ISE!'
+                    , buttonLink:pageLinks.events.cycling
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: pic04
                     , pageLink: pageLinks.events.welfare
                     , title: 'Welfare Giveaways'
                     , body: 'The ISE Welfare Pack is an initiative to show appreciation for students’ hard work and effort throughout the academic semester. It also serves to encourage and power students through for the upcoming final examinations. Stay tuned for giveaways, be it welfare pack, milk tea...!'
+                    , buttonLink:pageLinks.events.welfare
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: CIP
                     , pageLink: pageLinks.events.cip
                     , title: 'Community Involvement Projects'
                     , body: 'Every year, the Club partners with external NGOs to give back to the community and make a difference. This provides our students with an opportunity to experience the joy of volunteering.'
+                    , buttonLink:pageLinks.events.cip
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: pic06
                     , pageLink: pageLinks.events.careertalk
                     , title: 'ISE Industry and Career Talk'
                     , body: 'ISE Industry and Career Talk is an annual event held in Semester 2 where different industries are invited to share about their company. This event aims to educate ISE undergraduates on how ISE can be applied to different industries and help them understand what companies expect from graduates.'
+                    , buttonLink:pageLinks.events.careertalk
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: BACC
                     , pageLink: pageLinks.events.bacc
                     , title: 'Business Analytics Case Competition'
                     , body: 'NUS-ISE BACC, introduced in 2012, is an outreach effort by the NUS-ISEM department to engage the pre-university students in the growing field of business analytics and attract their interests in pursuing related fields in their higher education. Under this platform, students will be exposed to analytics and ISE concepts, and apply them in solving real-world case problem.'
+                    , buttonLink:pageLinks.events.bacc
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: pic06
                     , pageLink: '#'
                     , title: 'Engagements'
                     , body: 'Be it NUS Open Day, Freshmen Welcome Tea, Engin Life Fair... catch us at a multitude of events! We work closely with Engin Club and the ISEM Dept to share with the rest of the world what ISE is about.'
+                    , buttonLink:"#"
+                    , buttonText:"More"
+                    , display:true
                   }, {
                     image: pic06
                     , pageLink: '#'
                     , title: '...and many more!'
                     , body: 'We are always exploring new and exciting events for the ISE community! Stay tuned for more exciting events ;)'
+                    , buttonLink:"#"
+                    , buttonText:"More"
+                    , display:true
                   }
                 ].map((fillData, index) => {
                   return (
-                    <Article key={fillData.title} articleprops={fillData} />
+                    fillData.display 
+                      ? <Article key={fillData.title} articleprops={fillData} />
+                      : null
                   )
                 })}
               </div>

@@ -53,7 +53,7 @@ class Page extends React.Component {
                                         , body: "We're back again with this year's instalment of ISE Day! You know the drill: free buffet food and giveaways :) We will be selling ISE shirts too! Additionally, there will be department/SEP/Micron Internships & System Design Projects talks as well. Sign up now (so we know to cater more food)!"
                                         , buttonLink: pageLinks.signUps.day
                                         , buttonText: "Sign Up"
-                                        , display: true
+                                        , display: false
                                     }, {
                                         image: ISENight
                                         , pageLink: pageLinks.events.night
@@ -61,7 +61,7 @@ class Page extends React.Component {
                                         , body: "This year's instalment of ISE Night ups the game... by 20 floors to be exact. Right in the middle of Singapore's business district, 360 Lounge is a modern oasis with an amazing view, tucked away on the 20th floor of Oxley Tower. Sign up now, and we'll see you there!"
                                         , buttonLink: pageLinks.signUps.night
                                         , buttonText: "Sign Up"
-                                        , display: true
+                                        , display: false
                                     }, {
                                         image: ISENC2019
                                         , pageLink: pageLinks.events.cycling

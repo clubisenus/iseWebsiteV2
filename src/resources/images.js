@@ -10,6 +10,7 @@ import ISEFOC_ from './images/ISEFOC.jpg'
 import NC_ from './images/NC.jpg'
 import ISEDayPoster_ from './images/ISEDayPoster.jpg'
 import ISENight_ from "./images/ISENight.png"
+import ISE_Merch_ from "./images/ISE_Merch.jpg"
 //Import Things that will get changed and with new names, eg NightCycling2019
 import ISENC2019_ from './images/ISENC2019.png'
 import pic01_ from './images/pic01.jpg'
@@ -39,6 +40,7 @@ export const NC = NC_
 export const ISEDayPoster = ISEDayPoster_
 export const ISENC2019 = ISENC2019_
 export const ISENight = ISENight_
+export const ISE_Merch = ISE_Merch_
 //ExportThings that will get changed and with new names, eg NightCycling2019
 export const pic01 = pic01_
 export const pic02 = pic02_

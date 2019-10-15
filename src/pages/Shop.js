@@ -8,7 +8,7 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
-import { iseclublogobanner } from '../resources/images';
+import { ISE_Merch } from '../resources/images';
 const mapStateToProps = state => {
     return {
         //state:state
@@ -43,7 +43,7 @@ class Page extends React.Component {
                                 <h1>Merchandise</h1>
                             </header>
 
-                            <span class="image main"><img src={iseclublogobanner} alt="" /></span>
+                            <span class="image main"><img src={ISE_Merch} alt="" /></span>
                             <hr class="major" />
 
                             <h2>BUY SOME SHIRTS </h2>

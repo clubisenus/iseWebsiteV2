@@ -126,10 +126,12 @@ class LeftDrawer extends Component {
                                 <h2>Upcoming Events</h2>
                             </header>
                             <div class="mini-posts">
+                                {/*
                                 <article>
                                     <a onClick={this.props.ToggleNavBar} href={pageLinks.events.day} class="image"><img src={pic07} alt="" /></a>
                                     <p>ISE Day is here soon! Click <a href={pageLinks.events.day}>here</a> to find out more.</p>
                                 </article>
+                                */}
                                 <article>
                                     <a onClick={this.props.ToggleNavBar} href={pageLinks.events.cycling} class="image"><img src={ISENC2019} alt="" /></a>
                                     <p>Ready for a night of fun and laughter? Learn more about Night Cycling <a href={pageLinks.events.cycling}>here</a>.</p>

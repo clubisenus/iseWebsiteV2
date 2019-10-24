@@ -69,7 +69,7 @@ class Page extends React.Component {
                                         , body: "The annual ISE Night Cycling event is a long time favourite of ours! A night of fun, cycling, and laughter :) Join us in welcoming the freshman into the ISE family this year. An annual event definitely not to be missed! Limited edition Night Cycling shirt + drawstring bag (filled w goodies) for every participant! Sign up now!"
                                         , buttonLink: pageLinks.signUps.cycling
                                         , buttonText: "Sign Up"
-                                        , display: true
+                                        , display: false
                                     }, {
                                         image: pic04
                                         , pageLink: pageLinks.events.welfare

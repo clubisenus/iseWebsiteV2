@@ -132,17 +132,19 @@ class LeftDrawer extends Component {
                                     <p>ISE Day is here soon! Click <a href={pageLinks.events.day}>here</a> to find out more.</p>
                                 </article>
                                 */}
+                                {/*
                                 <article>
                                     <a onClick={this.props.ToggleNavBar} href={pageLinks.events.cycling} class="image"><img src={ISENC2019} alt="" /></a>
                                     <p>Ready for a night of fun and laughter? Learn more about Night Cycling <a href={pageLinks.events.cycling}>here</a>.</p>
                                 </article>
+                                */}
                                 <article>
                                     <a onClick={this.props.ToggleNavBar} href={pageLinks.internal.shop} class="image"><img src={pic09} alt="" /></a>
                                     <p>ISE Shirt Sales have started! Click <a href={pageLinks.internal.shop}>here</a> to shop now</p>
                                 </article>
                             </div>
                             <ul class="actions">
-                                <li><a href={pageLinks.internal.bio} class="button">More</a></li>
+                                <li><a onClick={this.props.ToggleNavBar} href={pageLinks.internal.bio} class="button">More</a></li>
                             </ul>
                         </section>
 

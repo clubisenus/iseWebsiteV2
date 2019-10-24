@@ -8,6 +8,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 //pages for react-router-dom
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import MC18 from './pages/MC18'
@@ -74,6 +75,9 @@ render(
             <Route path="/shop" component={Shop} />
             <Route path="/sponsorship" component={Sponsorship} />
             <Route path="/welfare" component={Welfare} />
+            {/*
+            <Route component = {Home} />
+            */}
           </Switch>
         </Router>
     </ThemeProvider>

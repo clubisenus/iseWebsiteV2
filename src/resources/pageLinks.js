@@ -5,6 +5,7 @@ xyz: domain+"xyz"
 */
 
 let domain = process.env.PUBLIC_URL + '/#/'
+//let domain = process.env.PUBLIC_URL + '/'
 //event pages
 let pageLinks = {
     signUps: {

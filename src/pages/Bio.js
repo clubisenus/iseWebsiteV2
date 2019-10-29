@@ -9,7 +9,7 @@ import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 import Article from '../components/Article'
 
-import { iseclublogobanner, ISEDayPoster, ISENight, ISENC2019, pic04, CIP, pic06, BACC } from '../resources/images';
+import { iseclublogobanner, ISEDayPoster, ISENight, ISENC2019, pic04, CIP, pic06, BACC, Welfare_Poster, CIP_Poster } from '../resources/images';
 import pageLinks from '../resources/pageLinks';
 const mapStateToProps = state => {
     return {
@@ -71,21 +71,21 @@ class Page extends React.Component {
                                         , buttonText: "Sign Up"
                                         , display: false
                                     }, {
-                                        image: pic04
+                                        image: Welfare_Poster
                                         , pageLink: pageLinks.events.welfare
                                         , title: "Welfare Giveaways"
-                                        , body: "The ISE Welfare Pack is an initiative to show appreciation for studentsâ€™ hard work and effort throughout the academic semester. It also serves to encourage and power students through for the upcoming final examinations. Stay tuned for giveaways, be it welfare pack, milk tea...!"
-                                        , buttonLink: pageLinks.internal.welfare
-                                        , buttonText: "More"
-                                        , display: false
+                                        , body: "Hey guys!! We will be having a welfare pack giveaway next Tuesday (5th Nov) between 2-5pm. Come on down to the benches outside LT6 to collect your welfare pack!🍭🍪🍫🍬 Please indicate your interest in the link below and come in your ISE shirts. See you there!"
+                                        , buttonLink: pageLinks.signUps.welfare
+                                        , buttonText: "Sign Up"
+                                        , display: true
                                     }, {
-                                        image: CIP
+                                        image: CIP_Poster
                                         , pageLink: pageLinks.events.cip
                                         , title: "Community Involvement Projects"
-                                        , body: "Every year, the Club partners with external NGOs to give back to the community and make a difference."
-                                        , buttonLink: pageLinks.internal.cip
-                                        , buttonText: "More"
-                                        , display: false
+                                        , body: "Looking for ways to give back to the community? ISE Club is back with another volunteering opportunity for you! Join us for a day of shopping with the elderly at Queenstown. Together we can put a smile on their faces! 😌 \n Date: 11 January 2020 \n Time: 8am-12.30pm \n Location: Anchor Point\n What are you waiting for? Grab your friends and sign up now!"
+                                        , buttonLink: pageLinks.signUps.cip
+                                        , buttonText: "Sign Up"
+                                        , display: true
                                     }, {
                                         image: pic06
                                         , pageLink: pageLinks.events.careertalk

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { SwipeableDrawer, List, ListItem, Collapse, Link } from '@material-ui/core';
 import pageLinks from '../resources/pageLinks'
 import { KeyboardArrowUp, KeyboardArrowDown } from '@material-ui/icons';
-import { pic07, ISENC2019, pic09 } from '../resources/images';
+import { pic07, ISENC2019, pic09, Welfare_Poster, CIP_Poster } from '../resources/images';
 const mapStateToProps = state => {
     return {
         state: state.iseWebsite
@@ -139,9 +139,19 @@ class LeftDrawer extends Component {
                                 </article>
                                 */}
                                 <article>
+                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.welfare} class="image"><img src={Welfare_Poster} alt="" /></a>
+                                    <p>Welfare Pack! 5th Nov 2-5pm @ LT6, go! go! go! Click <a href={pageLinks.signUps.welfare}>here</a> to register!</p>
+                                </article>
+                                <article>
+                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.cip} class="image"><img src={CIP_Poster} alt="" /></a>
+                                    <p>Looking for ways to give back to the community? ISE Club is back with another volunteering opportunity for you! Click <a href={pageLinks.signUps.cip}>here</a> to sign up NOW!</p>
+                                </article>
+                                {/*
+                                <article>
                                     <a onClick={this.props.ToggleNavBar} href={pageLinks.internal.shop} class="image"><img src={pic09} alt="" /></a>
                                     <p>ISE Shirt Sales have started! Click <a href={pageLinks.internal.shop}>here</a> to shop now</p>
                                 </article>
+                                */}
                             </div>
                             <ul class="actions">
                                 <li><a onClick={this.props.ToggleNavBar} href={pageLinks.internal.bio} class="button">More</a></li>

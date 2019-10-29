@@ -11,7 +11,9 @@ let pageLinks = {
     signUps: {
         day: "https://orgsync.com/134642/forms/370677",
         night: "https://docs.google.com/forms/d/e/1FAIpQLSfLIVUp2zXMl7CkCYZ-g0b1RpYPy10xh3aGUhwf1K2hv2EyXA/viewform?usp=sf_link",
-        cycling: "https://bit.ly/isenightcycling19"
+        cycling: "https://bit.ly/isenightcycling19",
+        cip: "http://tinyurl.com/isecip2020",
+        welfare:"http://tinyurl.com/isewelfare"
     },
     external: {
         instagram: "https://www.instagram.com/nus_ise/",

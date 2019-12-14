@@ -77,7 +77,7 @@ class Page extends React.Component {
                                         , body: "Hey guys!! We will be having a welfare pack giveaway next Tuesday (5th Nov) between 2-5pm. Come on down to the benches outside LT6 to collect your welfare pack!🍭🍪🍫🍬 Please indicate your interest in the link below and come in your ISE shirts. See you there!"
                                         , buttonLink: pageLinks.signUps.welfare
                                         , buttonText: "Sign Up"
-                                        , display: true
+                                        , display: false
                                     }, {
                                         image: CIP_Poster
                                         , pageLink: pageLinks.events.cip

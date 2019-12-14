@@ -9,7 +9,7 @@ import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 import Article from '../components/Article'
 
-import { iseclublogobanner, ISEDayPoster, ISENight, ISENC2019, pic04, CIP, pic06, BACC, Welfare_Poster, CIP_Poster } from '../resources/images';
+import { ISEDayPoster, ISENight, ISENC2019, pic06, BACC, Welfare_Poster, CIP_Poster } from '../resources/images';
 import pageLinks from '../resources/pageLinks';
 const mapStateToProps = state => {
     return {
@@ -23,10 +23,11 @@ const mapDispatchToProps = dispatch => {
     }
 }
 class Page extends React.Component {
+/*
     constructor(props) {
         super(props);
-        //this.state = {date: new Date()};
     }
+    */
 
     componentDidMount() {
         window.scrollTo(0, 0)

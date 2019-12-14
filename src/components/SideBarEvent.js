@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 import { withTheme } from '@material-ui/styles';
 
-import DefaultButton from './DefaultButton'
-
 const mapStateToProps = state => {
     return {
         //state: state.iseWebsite

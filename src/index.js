@@ -75,9 +75,7 @@ render(
             <Route path="/shop" component={Shop} />
             <Route path="/sponsorship" component={Sponsorship} />
             <Route path="/welfare" component={Welfare} />
-            {/*
             <Route component = {Home} />
-            */}
           </Switch>
         </Router>
     </ThemeProvider>

@@ -46,8 +46,8 @@ class Page extends React.Component {
                             <span class="image main"><img src={BACCbanner} alt="" /></span>
                             <hr class="major" />
 
-                            <h2>National University of Singapore Industrial & Systems Engineering Business Analytics Case Competition </h2>
-                            <p>that was really long</p>
+                            <h2>Micron NUS ISE Business Analytics Case Competition 2020 </h2>
+                            <p>The NUS ISE Business Analytics Case Competition is back!</p>
 
 
                             <hr class="major" />

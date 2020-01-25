@@ -164,7 +164,7 @@ class LeftDrawer extends Component {
                             </header>
                             <p>Queries? Feedback? Feel free to reach out to us here! Or you can DM us on Instagram ;)</p>
                             <ul class="contact">
-                                <li class="icon solid fa-envelope"><a href={pageLinks.external.email}>club.ise.nus@gmail.com</a></li>
+                                <li class="icon solid fa-envelope"><a href={pageLinks.external.email}>info@nusiseclub.com</a></li>
                                 <li class="icon solid fa-home">1 Engineering Drive 2, Blk E1A #06-25 <br />
                                     Singapore 117576</li>
                             </ul>

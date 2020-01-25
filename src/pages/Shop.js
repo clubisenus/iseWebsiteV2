@@ -21,11 +21,12 @@ const mapDispatchToProps = dispatch => {
     }
 }
 class Page extends React.Component {
+    /*
     constructor(props) {
         super(props);
-        //this.state = {date: new Date()};
     }
-
+    */
+   
     componentDidMount() {
         window.scrollTo(0, 0)
     }

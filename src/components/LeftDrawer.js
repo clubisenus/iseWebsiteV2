@@ -6,6 +6,7 @@ import { SwipeableDrawer, List, ListItem, Collapse, Link } from '@material-ui/co
 import pageLinks from '../resources/pageLinks'
 import { KeyboardArrowUp, KeyboardArrowDown } from '@material-ui/icons';
 import { pic07, ISENC2019, pic09, Welfare_Poster, CIP_Poster } from '../resources/images';
+import SideBarEvent from './SideBarEvent';
 const mapStateToProps = state => {
     return {
         state: state.iseWebsite
@@ -128,30 +129,44 @@ class LeftDrawer extends Component {
                             <div class="mini-posts">
                                 {/*
                                 <article>
-                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.day} class="image"><img src={pic07} alt="" /></a>
-                                    <p>ISE Day is here soon! Click <a href={pageLinks.events.day}>here</a> to find out more.</p>
-                                </article>
-                                */}
-                                {/*
-                                <article>
-                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.cycling} class="image"><img src={ISENC2019} alt="" /></a>
-                                    <p>Ready for a night of fun and laughter? Learn more about Night Cycling <a href={pageLinks.events.cycling}>here</a>.</p>
-                                </article>
-                                */}
-                                <article>
-                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.welfare} class="image"><img src={Welfare_Poster} alt="" /></a>
-                                    <p>Welfare Pack! 5th Nov 2-5pm @ LT6, go! go! go! Click <a href={pageLinks.signUps.welfare}>here</a> to register!</p>
-                                </article>
-                                <article>
-                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.cip} class="image"><img src={CIP_Poster} alt="" /></a>
-                                    <p>Looking for ways to give back to the community? ISE Club is back with another volunteering opportunity for you! Click <a href={pageLinks.signUps.cip}>here</a> to sign up NOW!</p>
-                                </article>
-                                {/*
-                                <article>
                                     <a onClick={this.props.ToggleNavBar} href={pageLinks.internal.shop} class="image"><img src={pic09} alt="" /></a>
                                     <p>ISE Shirt Sales have started! Click <a href={pageLinks.internal.shop}>here</a> to shop now</p>
                                 </article>
                                 */}
+                                {[
+                                    { 
+                                        image: pic07
+                                        , pageLink: pageLinks.events.day
+                                        , body: "ISE Day is coming soon!"
+                                        , display: false
+                                    },{
+                                        image: ISENC2019
+                                        , pageLink: pageLinks.events.cycling
+                                        , body: "Ready for a night of fun and laughter?"
+                                        , display: false
+                                    },{
+                                        image: Welfare_Poster
+                                        , pageLink: pageLinks.events.welfare
+                                        , body: "Welfare Pack! 5th Nov 2-5pm @ LT6, go! go! go!"
+                                        , display: false
+                                    },{
+                                        image: CIP_Poster
+                                        , pageLink: pageLinks.internal.shop
+                                        , body: "Looking for ways to give back to the community? ISE Club is back with another volunteering opportunity for you!"
+                                        , display: true
+                                    },{
+                                        image: pic09
+                                        , pageLink: pageLinks.internal.shop
+                                        , body: "ISE Shirt Sales have started!"
+                                        , display: false
+                                    },
+                                ].map((fillData, index) => {
+                                    return (
+                                        fillData.display
+                                            ? <SideBarEvent key={fillData.pageLink} eventprops={fillData} />
+                                            : null
+                                    )
+                                })}
                             </div>
                             <ul class="actions">
                                 <li><a onClick={this.props.ToggleNavBar} href={pageLinks.internal.bio} class="button">More</a></li>

@@ -10,8 +10,6 @@ import LeftDrawer from '../components/LeftDrawer'
 
 import { iseclublogo, ISEFOCpic, pic02, NC, pic04, CIP, pic06, BACC } from '../resources/images';
 import pageLinks from '../resources/pageLinks';
-import { Button } from '@material-ui/core';
-import DefaultButton from '../components/DefaultButton';
 import Article from '../components/Article';
 
 const mapStateToProps = state => {
@@ -26,10 +24,11 @@ const mapDispatchToProps = dispatch => {
   }
 }
 class Page extends React.Component {
-  constructor(props) {
-    super(props);
-    //this.state = {date: new Date()};
-  }
+/*
+    constructor(props) {
+        super(props);
+    }
+    */
 
   componentDidMount() {
     window.scrollTo(0, 0)

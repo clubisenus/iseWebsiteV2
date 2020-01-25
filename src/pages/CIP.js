@@ -8,7 +8,7 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
-import { CIP, CIP_Poster } from '../resources/images';
+import { CIP_Poster } from '../resources/images';
 import pageLinks from '../resources/pageLinks';
 const mapStateToProps = state => {
     return {
@@ -22,10 +22,11 @@ const mapDispatchToProps = dispatch => {
     }
 }
 class Page extends React.Component {
+/*
     constructor(props) {
         super(props);
-        //this.state = {date: new Date()};
     }
+    */
 
     componentDidMount() {
         window.scrollTo(0, 0)

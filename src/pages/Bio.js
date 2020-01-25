@@ -9,7 +9,7 @@ import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 import Article from '../components/Article'
 
-import { iseclublogobanner, ISEDayPoster, ISENight, ISENC2019, pic04, CIP, pic06, BACC, Welfare_Poster, CIP_Poster } from '../resources/images';
+import { ISEDayPoster, ISENight, ISENC2019, pic06, BACC, Welfare_Poster, CIP_Poster } from '../resources/images';
 import pageLinks from '../resources/pageLinks';
 const mapStateToProps = state => {
     return {
@@ -23,10 +23,11 @@ const mapDispatchToProps = dispatch => {
     }
 }
 class Page extends React.Component {
+/*
     constructor(props) {
         super(props);
-        //this.state = {date: new Date()};
     }
+    */
 
     componentDidMount() {
         window.scrollTo(0, 0)
@@ -77,7 +78,7 @@ class Page extends React.Component {
                                         , body: "Hey guys!! We will be having a welfare pack giveaway next Tuesday (5th Nov) between 2-5pm. Come on down to the benches outside LT6 to collect your welfare pack!🍭🍪🍫🍬 Please indicate your interest in the link below and come in your ISE shirts. See you there!"
                                         , buttonLink: pageLinks.signUps.welfare
                                         , buttonText: "Sign Up"
-                                        , display: true
+                                        , display: false
                                     }, {
                                         image: CIP_Poster
                                         , pageLink: pageLinks.events.cip

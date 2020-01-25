@@ -105,7 +105,7 @@ class LeftDrawer extends Component {
                                             <Link href={pageLinks.events.careertalk}>ISE Industry and Career Talk</Link>
                                         </ListItem>
                                         <ListItem onClick={this.props.ToggleNavBar}>
-                                            <Link href={pageLinks.events.bacc}>NUS ISE Business Analytics Case Competition</Link>
+                                            <Link href=https://www.nusiseclub.com/BACC>NUS ISE Business Analytics Case Competition</Link>
                                         </ListItem>
                                     </List>
                                 </Collapse>

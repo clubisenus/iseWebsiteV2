@@ -198,7 +198,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
-			h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+			h1 br, h2 br, h3 br, h4 br, h5 br {
 				display: none;
 			}
 

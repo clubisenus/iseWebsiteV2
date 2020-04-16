@@ -2701,7 +2701,6 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			header p br {
-				display: none;
 			}
 
 		}

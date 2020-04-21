@@ -1822,7 +1822,7 @@ input, select, textarea {
 
 	.box {
 		border-radius: 6px;
-		border: solid 1px #e6e6e6;
+		border: solid 0px #e6e6e6;
 		margin-bottom: 2em;
 		padding: 1.5em;
 	}
@@ -1977,7 +1977,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-			background-color: #4696e5;
+			background-color: #1B958D;
 			color: #ffffff !important;
 		}
 
@@ -2279,14 +2279,14 @@ input, select, textarea {
 
 	.image {
 		border-radius: 0px;
-
+		border: solid 2px rgba(255, 255, 255, 0);
 		display: inline-block;
 		position: relative;
 		overflow: hidden;
 	}
 
 		.image img {
-			border-radius: 6px;
+			border-radius: 0px;
 			display: block;
 		}
 
@@ -2332,6 +2332,32 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+		.image.custom {
+			display: block;
+			margin: 0 0 2em 0;
+			margin-left: auto;
+			margin-right: auto;			
+			width: 40em;
+		}
+
+			.image.custom img {
+				width: 100%;
+			}
+		.image.customa {
+			display: block;
+			margin: 0 0 2em 0;
+			margin-left: auto;
+			margin-right: auto;	
+			box-shadow: none;
+			border-radius: 0;
+			width: 50em;
+		}
+
+			.image.customa img {
+				border-radius: 0;
+				display: block;
+				width: 100%;
+			}			
 
 		.image.phone {
 			box-shadow: none;
@@ -2595,11 +2621,12 @@ input, select, textarea {
 		}
 
 /* Icons */
-
+	}
 	ul.icons {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		text-decoration: none;
 	}
 
 		ul.icons li {
@@ -2613,6 +2640,7 @@ input, select, textarea {
 
 			ul.icons li .icon:before {
 				font-size: 1.75rem;
+				text-decoration: none;
 			}
 
 		ul.icons.major li {
@@ -2621,6 +2649,7 @@ input, select, textarea {
 
 			ul.icons.major li .icon:before {
 				font-size: 2.75rem;
+				text-decoration: none;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -2631,6 +2660,7 @@ input, select, textarea {
 
 				ul.icons.major li .icon:before {
 					font-size: 1.75rem;
+					text-decoration: none;
 				}
 
 		}
@@ -2644,6 +2674,7 @@ input, select, textarea {
 				vertical-align: middle;
 				font-size: 2.25rem;
 				margin-right: 0.5em;
+				text-decoration: none;
 			}
 
 			ul.icons.labeled li .icon .label {
@@ -2673,6 +2704,7 @@ input, select, textarea {
 					display: block;
 					float: left;
 					margin-right: 0;
+					text-decoration: none;
 				}
 
 				ul.icons.labeled li .icon:after {

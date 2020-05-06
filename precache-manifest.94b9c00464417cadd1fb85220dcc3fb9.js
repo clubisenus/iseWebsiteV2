@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7cd6e261a3dc17da15e0885df5c2c67",
+    "revision": "59281681d8104bd1c93d13564e3679da",
     "url": "https://nusiseclub.com/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://nusiseclub.com/static/js/2.c8462521.chunk.js"
   },
   {
-    "revision": "3b5e94737c887646c418",
-    "url": "https://nusiseclub.com/static/js/main.e1b52ddb.chunk.js"
+    "revision": "444fa2381fe80c94777c",
+    "url": "https://nusiseclub.com/static/js/main.c1c99c38.chunk.js"
   },
   {
     "revision": "bcb0933cb510933a9d6d",

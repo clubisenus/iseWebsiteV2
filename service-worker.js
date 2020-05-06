@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://nusiseclub.com/precache-manifest.ef7a19f2911e7485635bf33aa6d15c03.js"
+  "https://nusiseclub.com/precache-manifest.52817314c992ef9a37d380558423f4e4.js"
 );
 
 self.addEventListener('message', (event) => {

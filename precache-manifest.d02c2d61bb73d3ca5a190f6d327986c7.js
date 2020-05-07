@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a9a56b3c3752ade0bb95dfa84da41c6c",
+    "revision": "a56030968986b238e5c8edb6604b7011",
     "url": "https://nusiseclub.com/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://nusiseclub.com/static/js/2.c8462521.chunk.js"
   },
   {
-    "revision": "6ff05e9a32bc1900c7f0",
-    "url": "https://nusiseclub.com/static/js/main.8732be10.chunk.js"
+    "revision": "a1b59e7ea3fbc9492c8b",
+    "url": "https://nusiseclub.com/static/js/main.63b7e1fd.chunk.js"
   },
   {
     "revision": "bcb0933cb510933a9d6d",
@@ -100,8 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://nusiseclub.com/static/media/ncpd18.3c1436bc.jpg"
   },
   {
-    "revision": "45739b5fb98d4fd707275f62ec693c3e",
-    "url": "https://nusiseclub.com/static/media/p18.45739b5f.jpg"
+    "revision": "1116048ed87e6e22bda55e3a19dabdcd",
+    "url": "https://nusiseclub.com/static/media/p18.1116048e.jpg"
   },
   {
     "revision": "0dd9d24e3e48478ea9b5d7dcb96bc87d",

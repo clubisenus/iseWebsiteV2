@@ -32,7 +32,7 @@ const MC18 = (props) => (
                         <h1>19th Management Committee</h1>
                     </header>
                     <span class="image main"><img src={mc19banner} alt="" /></span>
-                    <p><br></br><br></br>The <strong>NUS Industrial Systems & Engineering Club 9th Management Committee</strong> is formed out of 2X dedicated individuals. <br></br><br></br></p>
+                    <p><br></br><br></br>The <strong>NUS Industrial Systems & Engineering Club 19th Management Committee</strong> is formed out of 29 dedicated individuals. <br></br><br></br></p>
                     <hr class="major" />
                     <h2>President</h2>
                     <p><span class="image leftmc"><img src={p19} alt="" /></span><br></br><br></br><br></br><strong>Kerwin Tan</strong> currently leads the 19th Management Committee. <br></br></p>

@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b9528e162d71c360b2453a7be42fcc6f",
+    "revision": "ea4454faa510b450531936ba00a9e727",
     "url": "https://nusiseclub.com/index.html"
   },
   {
-    "revision": "c27ef34979e20490a666",
-    "url": "https://nusiseclub.com/static/js/2.c8462521.chunk.js"
+    "revision": "faa6c59bab57995f62c2",
+    "url": "https://nusiseclub.com/static/js/2.09ad15a3.chunk.js"
   },
   {
-    "revision": "eb7288e42577efadd33b",
-    "url": "https://nusiseclub.com/static/js/main.9aa10dc9.chunk.js"
+    "revision": "8ea4b2e8704a8cd875ac",
+    "url": "https://nusiseclub.com/static/js/main.66635975.chunk.js"
   },
   {
     "revision": "bcb0933cb510933a9d6d",
@@ -18,6 +18,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9fa33d5e3d58c98249c17d9b4e76e92c",
     "url": "https://nusiseclub.com/static/media/18mcbanner.9fa33d5e.jpg"
+  },
+  {
+    "revision": "58e6b8d2c5cf3233aecc7b9e2aae15a6",
+    "url": "https://nusiseclub.com/static/media/20mcbanner.58e6b8d2.jpg"
   },
   {
     "revision": "0e2ebd6d22027aa8a0df1154d9872da3",
@@ -96,12 +100,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://nusiseclub.com/static/media/isedpd18.f7905d57.jpg"
   },
   {
+    "revision": "8d3bfc1e1426253d2063141cf10e6bc8",
+    "url": "https://nusiseclub.com/static/media/mc19banner.8d3bfc1e.jpg"
+  },
+  {
     "revision": "3c1436bcbeacf26c2cb25514b58b2b15",
     "url": "https://nusiseclub.com/static/media/ncpd18.3c1436bc.jpg"
   },
   {
     "revision": "1116048ed87e6e22bda55e3a19dabdcd",
     "url": "https://nusiseclub.com/static/media/p18.1116048e.jpg"
+  },
+  {
+    "revision": "5b7336139b255cb1585919bb2edebec0",
+    "url": "https://nusiseclub.com/static/media/p19.5b733613.jpg"
+  },
+  {
+    "revision": "6d22ab5fb6c36c986d0d0b558a4d232f",
+    "url": "https://nusiseclub.com/static/media/p20.6d22ab5f.jpg"
   },
   {
     "revision": "0dd9d24e3e48478ea9b5d7dcb96bc87d",

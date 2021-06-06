@@ -78,6 +78,9 @@ class LeftDrawer extends Component {
                                 </ListItem>
                                 <Collapse in={this.state.showEvents}>
                                     <List>
+										<ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.internal.mc20}>20th Management Committee</Link>
+                                        </ListItem>
                                         <ListItem onClick={this.props.ToggleNavBar}>
                                             <Link href={pageLinks.internal.mc19}>19th Management Committee</Link>
                                         </ListItem>

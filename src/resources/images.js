@@ -5,8 +5,10 @@ import iseclublogobanner2_ from './images/ISEclublong.png'
 import iseclubbanner_ from './images/ISEclublong.png'
 import mc18banner_ from './images/18mcbanner.jpg'
 import mc19banner_ from './images/mc19banner.jpg'
+import mc20banner_ from './images/20mcbanner.jpg'
 import p18_ from './images/p18.jpg'
 import p19_ from './images/p19.jpg'
+import p20_ from './images/p20.jpg'
 import vpi18_ from './images/vpi18.jpg'
 import vpe18_ from './images/vpe18.jpg'
 import gs18_ from './images/gs18.jpg'
@@ -54,8 +56,10 @@ export const iseclublogobanner2 = iseclublogobanner2_
 export const iseclubbanner = iseclubbanner_
 export const mc18banner = mc18banner_
 export const mc19banner = mc19banner_
+export const mc20banner = mc20banner_
 export const p18 = p18_
 export const p19 = p19_
+export const p20 = p20_
 export const vpi18 = vpi18_
 export const vpe18 = vpe18_
 export const gs18 = gs18_

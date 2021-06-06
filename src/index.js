@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import MC18 from './pages/MC18'
 import MC19 from './pages/MC19'
+import MC20 from './pages/MC20'
 import CareerTalk from './pages/CareerTalk'
 import CIP from './pages/CIP'
 import Contact from './pages/Contact'
@@ -25,6 +26,7 @@ import Welfare from './pages/Welfare'
 import Blog from './pages/Blog'
 import Bio from './pages/Bio'
 import ISENight from './pages/ISENight'
+
 
 const store = createStore(rootReducer)
 
@@ -63,6 +65,7 @@ render(
             <Route path="/about" component={About} />
             <Route path="/18mc" component={MC18} />
 			<Route path="/19mc" component={MC19} />
+			<Route path="/20mc" component={MC20} />
             <Route path="/blog" component={Blog} />
             <Route path="/bio" component={Bio} />
             <Route path="/careertalk" component={CareerTalk} />

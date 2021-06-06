@@ -27,11 +27,14 @@ const mapDispatchToProps = dispatch => {
 
 }
 class HoverLink extends Component {
-/*
     constructor(props) {
         super(props);
+		/*
+		this.state = {
+			//navBar:true,
+		};
+		*/
     }
-    */
     render() {
         let { href, contents } = this.props.HoverProps
         let style = {marginBottom: 0, marginTop: 0,...this.props.style,color:this.props.theme.palette.text.primary}

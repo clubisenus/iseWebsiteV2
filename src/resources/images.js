@@ -1,7 +1,23 @@
 //Import Constants that don't change eg. logos 
 import iseclublogo_ from './images/iseclublogo.png'
 import iseclublogobanner_ from './images/iseclublogobanner.png'
-import iseclublogobanner2_ from './images/iseclublogobanner2.png'
+import iseclublogobanner2_ from './images/ISEclublong.png'
+import iseclubbanner_ from './images/ISEclublong.png'
+import mc18banner_ from './images/18mcbanner.jpg'
+import p18_ from './images/p18.jpg'
+import vpi18_ from './images/vpi18.jpg'
+import vpe18_ from './images/vpe18.jpg'
+import gs18_ from './images/gs18.jpg'
+import fs18_ from './images/fs18.jpg'
+import isedpd18_ from './images/isedpd18.jpg'
+import ncpd18_ from './images/ncpd18.jpg'
+import slpdc18_ from './images/slpdc18.jpg'
+import slpdo18_ from './images/slpdo18.jpg'
+import wpd18_ from './images/wpd18.jpg'
+import baccpdc18_ from './images/baccpdc18.jpg'
+import baccpdt18_ from './images/baccpdt18.jpg'
+
+
 //ImportThings that might need to get updated but keeping same name, eg. BACC
 import BACC_ from './images/BACC.jpg'
 import BACCbanner_ from './images/BACCbanner.jpg'
@@ -33,6 +49,21 @@ import pic11_ from './images/pic11.jpg'
 export const iseclublogo = iseclublogo_
 export const iseclublogobanner = iseclublogobanner_
 export const iseclublogobanner2 = iseclublogobanner2_
+export const iseclubbanner = iseclubbanner_
+export const mc18banner = mc18banner_
+export const p18 = p18_
+export const vpi18 = vpi18_
+export const vpe18 = vpe18_
+export const gs18 = gs18_
+export const fs18 = fs18_
+export const isedpd18 = isedpd18_
+export const ncpd18 = ncpd18_
+export const slpdc18 = slpdc18_
+export const slpdo18 = slpdo18_
+export const wpd18 = wpd18_
+export const baccpdc18 = baccpdc18_
+export const baccpdt18 = baccpdt18_
+
 //ExportThings that might need to get updated but keeping same name, eg. BACC
 export const BACC = BACC_
 export const BACCbanner = BACCbanner_

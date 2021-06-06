@@ -20,51 +20,40 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-class Page extends React.Component {
-/*
-    constructor(props) {
-        super(props);
-    }
-    */
+const Sponsorship = (props) => (
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
+    <div >
+        <LeftDrawer
+            display={props.display}
+        />
+        <TopBar />
+        <div id='main'>
+            <div class="inner">
+                <section>
+                    <header class="main">
+                        <h1>Sponsorships</h1>
+                    </header>
 
-    render() {
-        return (
+                    <span class="image main"><img src={iseclublogobanner} alt="" /></span>
+                    <hr class="major" />
 
-            <div >
-                <LeftDrawer />
-                <TopBar />
-                <div id='main'>
-                    <div class="inner">
-                        <section>
-                            <header class="main">
-                                <h1>Sponsorships</h1>
-                            </header>
-
-                            <span class="image main"><img src={iseclublogobanner} alt="" /></span>
-                            <hr class="major" />
-
-                            <h2>Looking to reach out to ... </h2>
-                            <p>You may refer to our Sponsorship Booklet here.</p>
+                    <h2>Looking to reach out to ... </h2>
+                    <p>You may refer to our Sponsorship Booklet here.</p>
 
 
-                            <hr class="major" />
+                    <hr class="major" />
 
-                        </section>
-                    </div>
-                </div>
+                </section>
             </div>
-        )
-    }
-}
+        </div>
+    </div>
+)
+
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(Page)
+        )(Sponsorship)
     )
 )

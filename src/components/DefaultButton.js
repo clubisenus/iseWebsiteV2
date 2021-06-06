@@ -16,17 +16,21 @@ const mapDispatchToProps = dispatch => {
     }
 }
 class DefaultButton extends Component {
-/*
     constructor(props) {
         super(props);
+		/*
+		this.state = {
+			//navBar:true,
+		};
+		*/
     }
-    */
     render() {
         let { href, contents } = this.props.ButtonProps
         return (
             <Button variant='outlined' 
             class="button" 
             href={href}
+            onClick={console.log(this.props)}
             >
                 {contents}
               </Button>

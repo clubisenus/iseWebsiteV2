@@ -22,11 +22,14 @@ const mapDispatchToProps = dispatch => {
   }
 }
 class TopBar extends Component {
-/*
-    constructor(props) {
-        super(props);
-    }
-    */
+  constructor(props) {
+    super(props);
+		/*
+		this.state = {
+			//navBar:true,
+		};
+		*/
+  }
 
   ToggleNavBar() {
     this.props.ToggleNavBar()

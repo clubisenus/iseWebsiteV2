@@ -20,52 +20,40 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-class Page extends React.Component {
-    /*
-    constructor(props) {
-        super(props);
-    }
-    */
+const NUSISEBACC = (props) => (
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
+    <div >
+        <LeftDrawer
+            display={props.display}
+        />
+        <TopBar />
+        <div id='main'>
+            <div class="inner">
+                <section>
+                    <header class="main">
+                        <h1>NUS ISE BACC</h1>
+                    </header>
 
-    render() {
-        return (
+                    <span class="image main"><img src={BACCbanner} alt="" /></span>
+                    <hr class="major" />
 
-            <div >
-                <LeftDrawer />
-                <TopBar />
-                <div id='main'>
-                    <div class="inner">
-                        <section>
-                            <header class="main">
-                                <h1>NUS ISE BACC</h1>
-                            </header>
-
-                            <span class="image main"><img src={BACCbanner} alt="" /></span>
-                            <hr class="major" />
-
-                            <h2>Micron NUS ISE Business Analytics Case Competition 2020 </h2>
-                            <p>The NUS ISE Business Analytics Case Competition is back!</p>
+                    <h2>National University of Singapore Industrial & Systems Engineering Business Analytics Case Competition </h2>
+                    <p>that was really long</p>
 
 
-                            <hr class="major" />
+                    <hr class="major" />
 
-                        </section>
-                    </div>
-                </div>
+                </section>
             </div>
-        )
-    }
-}
+        </div>
+    </div>
+)
 
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(Page)
+        )(NUSISEBACC)
     )
 )

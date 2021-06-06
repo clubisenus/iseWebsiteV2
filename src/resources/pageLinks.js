@@ -5,15 +5,12 @@ xyz: domain+"xyz"
 */
 
 let domain = process.env.PUBLIC_URL + '/#/'
-//let domain = process.env.PUBLIC_URL + '/'
 //event pages
 let pageLinks = {
     signUps: {
         day: "https://orgsync.com/134642/forms/370677",
         night: "https://docs.google.com/forms/d/e/1FAIpQLSfLIVUp2zXMl7CkCYZ-g0b1RpYPy10xh3aGUhwf1K2hv2EyXA/viewform?usp=sf_link",
-        cycling: "https://bit.ly/isenightcycling19",
-        cip: "http://tinyurl.com/isecip2020",
-        welfare:"http://tinyurl.com/isewelfare"
+        cycling: "https://bit.ly/isenightcycling19"
     },
     external: {
         instagram: "https://www.instagram.com/nus_ise/",
@@ -25,6 +22,7 @@ let pageLinks = {
         domain,
         about: domain + "about",
         mc18: domain + "18mc",
+		mc19: domain + "19mc",
         blog: domain + "blog",
         bio:domain + "bio",
         shop: domain + "shop",
@@ -39,7 +37,7 @@ let pageLinks = {
         welfare: domain + "welfare",
         cip: domain + "cip",
         careertalk: domain + "careertalk",
-        bacc: domain + "nusisebacc"
+        bacc: "https://nusiseclub.com/bacc"
     }
 }
 export default pageLinks

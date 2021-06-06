@@ -21,51 +21,40 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-class Page extends React.Component {
-/*
-    constructor(props) {
-        super(props);
-    }
-    */
+const ISEDay = (props) => (
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
+    <div >
+        <LeftDrawer
+            display={props.display}
+        />
+        <TopBar />
+        <div id='main'>
+            <div class="inner">
+                <section>
+                    <header class="main">
+                        <h1>ISE Day</h1>
+                    </header>
 
-    render() {
-        return (
+                    <span class="image main"><img src={iseclublogobanner} alt="" /></span>
+                    <hr class="major" />
 
-            <div >
-                <LeftDrawer />
-                <TopBar />
-                <div id='main'>
-                    <div class="inner">
-                        <section>
-                            <header class="main">
-                                <h1>ISE Day</h1>
-                            </header>
-
-                            <span class="image main"><img src={iseclublogobanner} alt="" /></span>
-                            <hr class="major" />
-
-                            <h2>ISE Day</h2>
-                            <p>ISE Day woots</p>
+                    <h2>ISE Day</h2>
+                    <p>ISE Day woots</p>
 
 
-                            <hr class="major" />
+                    <hr class="major" />
 
-                        </section>
-                    </div>
-                </div>
+                </section>
             </div>
-        )
-    }
-}
+        </div>
+    </div>
+)
+
 export default withRouter(
     withTheme(
         compose(
             connect(mapStateToProps,
                 mapDispatchToProps)
-        )(Page)
+        )(ISEDay)
     )
 )

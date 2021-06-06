@@ -8,7 +8,7 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
-import { pic01, pic02, pic11 } from '../resources/images';
+import { pic01, pic02, pic11, mc19banner, p19 } from '../resources/images';
 
 const mapStateToProps = state => {
     return {
@@ -31,10 +31,11 @@ const MC18 = (props) => (
                     <header class="main">
                         <h1>19th Management Committee</h1>
                     </header>
-                    <span class="image main"><img src={pic11} alt="" /></span>
+                    <span class="image main"><img src={mc19banner} alt="" /></span>
+                    <p><br></br><br></br>The <strong>NUS Industrial Systems & Engineering Club 9th Management Committee</strong> is formed out of 2X dedicated individuals. <br></br><br></br></p>
                     <hr class="major" />
                     <h2>President</h2>
-                    <p><span class="image left"><img src={pic01} alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                    <p><span class="image leftmc"><img src={p19} alt="" /></span><br></br><br></br><br></br><strong>Kerwin Tan</strong> currently leads the 19th Management Committee. <br></br></p>
                     <hr class="major" />
                     <h2 align="right">Vice President (Internal)</h2>
                     <p><span class="image right"><img src={pic02} alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>

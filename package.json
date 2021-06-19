@@ -28,7 +28,7 @@
         "build:staging": "env-cmd -f .env.staging yarn run build",
         "build:production": "env-cmd -f .env.production yarn run build",
         "predeploy:staging": "env-cmd -f .env.staging yarn run build && echo > ./public/CNAME",
-        "predeploy:production": "env-cmd -f .env.production yarn run build && echo https://nusiseclub.com> ./public/CNAME",
+        "predeploy:production": "env-cmd -f .env.production yarn run build && echo https://nusiseclub.comlolz> ./public/CNAME",
         "deploy:staging": "env-cmd -f .env.staging yarn run build && echo > ./public/CNAME && gh-pages -d build -r https://github.com/clubisenus/iseWebsiteV2_test.git",
         "deploy:production": "env-cmd -f .env.production yarn run build && echo https://nusiseclub.comlol> ./public/CNAME && gh-pages -d build -r https://github.com/clubisenus/iseWebsiteV2.git"
     },

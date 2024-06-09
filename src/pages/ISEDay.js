@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-
 import { withTheme } from '@material-ui/styles';
 
-import TopBar from '../components/TopBar'
-import LeftDrawer from '../components/LeftDrawer'
+import TopBar from '../components/TopBar';
+import LeftDrawer from '../components/LeftDrawer';
 
 import { iseclublogobanner } from '../resources/images';
+import { iseday } from '../resources/events';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'; // Import the styles
+import placeholderImage from '../resources/images/pic06.jpg'; // Import the placeholder image
 
 const mapStateToProps = state => {
     return {
@@ -21,40 +24,38 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const ISEDay = (props) => (
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
+const ISEDay = (props) => (
+    <div>
+        <LeftDrawer display={props.display} />
         <TopBar />
         <div id='main'>
-            <div class="inner">
+            <div className="inner">
                 <section>
-                    <header class="main">
-                        <h1>ISE Day</h1>
+                    <header className="main">
+                        <h1>{iseday.name}</h1>
                     </header>
 
-                    <span class="image main"><img src={iseclublogobanner} alt="" /></span>
-                    <hr class="major" />
+                    <Slide easing="ease">
+                        {(iseday.images.length > 0 ? iseday.images : [placeholderImage]).map((image, index) => (
+                            <div className="each-slide" key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <img src={image} alt={`Slide ${index}`} style={{ width: '80%', height: 'auto', maxHeight: '500px', objectFit: 'contain' }} />
+                            </div>
+                        ))}
+                    </Slide>
 
-                    <h2>ISE Day</h2>
-                    <p>ISE Day woots</p>
-
-
-                    <hr class="major" />
-
+                    <h3 style={{ marginTop: '150px' }}>{iseday.description}</h3>
+                    <hr className="major" />
                 </section>
             </div>
         </div>
     </div>
-)
+);
 
 export default withRouter(
     withTheme(
         compose(
-            connect(mapStateToProps,
-                mapDispatchToProps)
+            connect(mapStateToProps, mapDispatchToProps)
         )(ISEDay)
     )
-)
+);

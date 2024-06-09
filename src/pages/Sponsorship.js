@@ -1,17 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-
 import { withTheme } from '@material-ui/styles';
 
-import TopBar from '../components/TopBar'
-import LeftDrawer from '../components/LeftDrawer'
+import TopBar from '../components/TopBar';
+import LeftDrawer from '../components/LeftDrawer';
 
 import { iseclublogobanner } from '../resources/images';
+import { sponsorships } from '../resources/sponsorships';
+
 const mapStateToProps = state => {
     return {
-        //state:state
+        //state: state
     }
 }
 
@@ -20,40 +21,124 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const Sponsorship = (props) => (
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
-        <TopBar />
-        <div id='main'>
-            <div class="inner">
-                <section>
-                    <header class="main">
-                        <h1>Sponsorships</h1>
-                    </header>
+const Sponsorship = (props) => {
 
-                    <span class="image main"><img src={iseclublogobanner} alt="" /></span>
-                    <hr class="major" />
+    const containerStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
+    };
 
-                    <h2>Looking to reach out to ... </h2>
-                    <p>You may refer to our Sponsorship Booklet here.</p>
+    const rowStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '20px'
+    };
 
+    const itemStyle = {
+        margin: '100px',
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    };
 
-                    <hr class="major" />
+    const logoStyle = {
+        width: '250px', // Default size for logos
+        height: '250px', // Default size for logos
+        objectFit: 'contain' // Ensure the logo maintains aspect ratio and fits within the specified dimensions,
+    };
 
-                </section>
+    const bigLogoStyle = {
+        width: '1000px', // Bigger size for specific logos
+        height: '1000px', // Bigger size for specific logos
+        objectFit: 'contain', // Ensure the logo maintains aspect ratio and fits within the specified dimensions,
+        marginBottom: '-300px' // Adjust the distance between the logo and the name
+    };
+
+    const nameStyle = {
+        marginTop: '10px',
+        fontSize: '1.5em',
+        textAlign: 'center'
+    };
+
+    const bigNameStyle = {
+        marginTop: '0px',
+        fontSize: '2em',
+        textAlign: 'center'
+    };
+
+    return (
+        <div>
+            <LeftDrawer display={props.display} />
+            <TopBar />
+            <div id='main'>
+                <div className="inner">
+                    <section>
+                        <header className="main">
+                            <h1>Sponsorships</h1>
+                        </header>
+                        
+                        <h2>Past Sponsors: </h2>
+                        <div style={containerStyle}>
+                            <div style={rowStyle}>
+                                {sponsorships.slice(0, 1).map((sponsorship) => (
+                                    <div style={itemStyle} key={sponsorship.name}>
+                                        <img 
+                                            style={sponsorship.name === 'Micron' ? bigLogoStyle : logoStyle} 
+                                            src={sponsorship.logo} 
+                                            alt={sponsorship.name} 
+                                        />
+                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle}>
+                                            {sponsorship.name}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div style={rowStyle}>
+                                {sponsorships.slice(1, 3).map((sponsorship) => (
+                                    <div style={itemStyle} key={sponsorship.name}>
+                                        <img 
+                                            style={sponsorship.name === 'Micron' ? bigLogoStyle : logoStyle} 
+                                            src={sponsorship.logo} 
+                                            alt={sponsorship.name} 
+                                        />
+                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle}>
+                                            {sponsorship.name}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div style={rowStyle}>
+                                {sponsorships.slice(3, 6).map((sponsorship) => (
+                                    <div style={itemStyle} key={sponsorship.name}>
+                                        <img 
+                                            style={sponsorship.name === 'Micron' ? bigLogoStyle : logoStyle} 
+                                            src={sponsorship.logo} 
+                                            alt={sponsorship.name} 
+                                        />
+                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle}>
+                                            {sponsorship.name}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <hr className="major" />
+
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-)
+    );
+};
 
 export default withRouter(
     withTheme(
         compose(
-            connect(mapStateToProps,
-                mapDispatchToProps)
+            connect(mapStateToProps, mapDispatchToProps)
         )(Sponsorship)
     )
-)
+);

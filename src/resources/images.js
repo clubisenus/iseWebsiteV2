@@ -23,11 +23,11 @@ import baccpdt18_ from './images/baccpdt18.jpg'
 
 
 //ImportThings that might need to get updated but keeping same name, eg. BACC
-import BACC_ from './images/BACC.jpg'
-import BACCbanner_ from './images/BACCbanner.jpg'
-import CIP_ from './images/CIP.png'
-import ISEFOC_ from './images/ISEFOC.jpg'
-import NC_ from './images/NC.jpg'
+import BACC_ from '../resources/images/BACC.jpg'
+import BACCbanner_ from '../resources/images/BACCbanner.jpg'
+import CIP_ from '../resources/images/CIP.png'
+import ISEFOC_ from '../resources/images/ISEFOC.jpg'
+import NC_ from '../resources/images/NC.jpg'
 import ISEDayPoster_ from './images/ISEDayPoster.jpg'
 import ISENight_ from "./images/ISENight.png"
 import ISE_Merch_ from "./images/ISE_Merch.jpg"
@@ -46,6 +46,9 @@ import pic08_ from './images/pic08.jpg'
 import pic09_ from './images/pic09.jpg'
 import pic10_ from './images/pic10.jpg'
 import pic11_ from './images/pic11.jpg'
+
+//import pictures of committee members
+import BryanTan_ from './images/Bryan.jpg'
 
 //BREAK BETWEEN IMPORTS AND EXPORTS//////////////////////////////////////////////
 
@@ -96,6 +99,10 @@ export const pic08 = pic08_
 export const pic09 = pic09_
 export const pic10 = pic10_
 export const pic11 = pic11_
+
+//export pictures of committee members
+export const BryanTan = BryanTan_
+
 //template
 /*
 import xyz_ from './images/xyz.png'

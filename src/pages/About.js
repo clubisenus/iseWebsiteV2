@@ -21,6 +21,8 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
+
+//update this whenever the committee changes :))
 const About = (props) => (
 
     <div >
@@ -42,7 +44,8 @@ const About = (props) => (
                     <p>NUS Industrial and Systems Engineering (ISE) Club of National University of Singapore is an affiliated club of the NUS Students’ Engineering Club and is the official club that represents the undergraduate body of Industrial and Systems Engineering.</p>
                     <p>It is a student run organisation that seeks to improve the student life and welfare of every undergraduate student in the Department. </p>
                     <p>Founded in 2002, ISE Club aims to instil a sense of belonging within the ISE community through various events held throughout each academic year focusing on both the welfare and academic aspect of the undergraduate community. </p>
-                    <p>The club is currently managed by the 18th Management Committee.</p>
+                    <p>The club is currently managed by the 23rd Management Committee.</p>
+                
 
 
                     <hr class="major" />

@@ -34,11 +34,7 @@ const Shop = (props) => (
                         <h1>Merchandise</h1>
                     </header>
 
-                    <span class="image main"><img src={iseclublogobanner} alt="" /></span>
-                    <hr class="major" />
-
-                    <h2>BUY SOME SHIRTS </h2>
-                    <p>#ISEPRIDE</p>
+                    
 
 
                     <hr class="major" />

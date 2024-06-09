@@ -1,14 +1,17 @@
-import React from 'react'
+import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-
 import { withTheme } from '@material-ui/styles';
 
-import TopBar from '../components/TopBar'
-import LeftDrawer from '../components/LeftDrawer'
+import TopBar from '../components/TopBar';
+import LeftDrawer from '../components/LeftDrawer';
 
-import { BACCbanner } from '../resources/images';
+import { bacc } from '../resources/events';
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'; // Import the styles
+import placeholderImage from '../resources/images/pic06.jpg'; // Import the placeholder image
+
 const mapStateToProps = state => {
     return {
         //state:state
@@ -20,40 +23,38 @@ const mapDispatchToProps = dispatch => {
 
     }
 }
-const NUSISEBACC = (props) => (
 
-    <div >
-        <LeftDrawer
-            display={props.display}
-        />
+const NUSISEBACC = (props) => (
+    <div>
+        <LeftDrawer display={props.display} />
         <TopBar />
         <div id='main'>
-            <div class="inner">
+            <div className="inner">
                 <section>
-                    <header class="main">
-                        <h1>NUS ISE BACC</h1>
+                    <header className="main">
+                        <h1>{bacc.name}</h1>
                     </header>
 
-                    <span class="image main"><img src={BACCbanner} alt="" /></span>
-                    <hr class="major" />
+                    <Slide easing="ease">
+                        {(bacc.images.length > 0 ? bacc.images : [placeholderImage]).map((image, index) => (
+                            <div className="each-slide" key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                <img src={image} alt={`Slide ${index}`} style={{ width: '80%', height: 'auto', maxHeight: '500px', objectFit: 'contain' }} />
+                            </div>
+                        ))}
+                    </Slide>
 
-                    <h2>National University of Singapore Industrial & Systems Engineering Business Analytics Case Competition </h2>
-                    <p>that was really long</p>
-
-
-                    <hr class="major" />
-
+                    <h3 style={{ marginTop: '150px' }}>{bacc.description}</h3>
+                    <hr className="major" />
                 </section>
             </div>
         </div>
     </div>
-)
+);
 
 export default withRouter(
     withTheme(
         compose(
-            connect(mapStateToProps,
-                mapDispatchToProps)
+            connect(mapStateToProps, mapDispatchToProps)
         )(NUSISEBACC)
     )
-)
+);

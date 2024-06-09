@@ -11,12 +11,12 @@
         "@material-ui/styles": "^4.4.1",
         "babel": "^6.23.0",
         "env-cmd": "^10.0.1",
-        "gh-pages": "^2.2.0",
+        "gh-pages": "^6.1.1",
         "react": "^16.9.0",
         "react-dom": "^16.9.0",
         "react-redux": "^7.1.1",
         "react-router-dom": "^5.0.1",
-        "react-scripts": "3.1.1",
+        "react-slideshow-image": "^4.3.1",
         "redux": "^4.0.4"
     },
     "scripts": {
@@ -46,5 +46,9 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "react-scripts": "^5.0.1",
+        "webpack": "^5.91.0"
     }
 }

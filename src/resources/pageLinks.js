@@ -38,7 +38,8 @@ let pageLinks = {
         welfare: domain + "welfare",
         cip: domain + "cip",
         careertalk: domain + "careertalk",
-        bacc: "https://nusiseclub.com/bacc"
+        bacc: domain + "nusisebacc",
+        lasertag: domain + "iselasertag"    
     }
 }
 export default pageLinks

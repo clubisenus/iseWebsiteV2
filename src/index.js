@@ -11,8 +11,8 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import MC18 from "./pages/MC18";
-import MC19 from "./pages/MC19";
-import MC20 from "./pages/MC20";
+//import MC19 from "./pages/MC19";
+//import MC20 from "./pages/MC20";
 import CareerTalk from "./pages/CareerTalk";
 import CIP from "./pages/CIP";
 import Contact from "./pages/Contact";
@@ -26,6 +26,7 @@ import Welfare from "./pages/Welfare";
 import Blog from "./pages/Blog";
 import Bio from "./pages/Bio";
 import ISENight from "./pages/ISENight";
+import ISElasertag from "./pages/ISElasertag";
 
 const store = createStore(rootReducer);
 
@@ -62,14 +63,13 @@ render(
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/18mc" component={MC18} />
-          <Route path="/19mc" component={MC19} />
-          <Route path="/20mc" component={MC20} />
           <Route path="/blog" component={Blog} />
           <Route path="/bio" component={Bio} />
           <Route path="/careertalk" component={CareerTalk} />
           <Route path="/cip" component={CIP} />
           <Route path="/contact" component={Contact} />
           <Route path="/iseday" component={ISEDay} />
+          <Route path="/iselasertag" component={ISElasertag} />
           <Route path="/isenight" component={ISENight} />
           <Route path="/isefoc" component={ISEFOC} />
           <Route path="/isenightcycling" component={NightCycling} />

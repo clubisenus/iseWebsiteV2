@@ -30,15 +30,18 @@ const Contact = (props) => (
                     <header className="main">
                         <h1>Contact us</h1>
                     </header>
-                    <span className="image main"><img src={iseclublogobanner} alt="" /></span>
                     <hr className="major" />
 
                     <h2>You may reach out to us via</h2>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '200px', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: "120px" }}>
                         {socials.map((social) => (
-                            <a key={social.name} href={social.link} target="_blank" rel="noopener noreferrer">
-                                <img src={social.icon} alt={social.name} style={{ width: '50px', height: '50px' }} />
-                            </a>
+                            <div key={social.name} style={{ textAlign: 'center' }}>
+                                <a href={social.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={social.icon} alt={social.name} style={{ width: '200px', height: '200px', marginBottom: '10px' }} />
+                                </a>
+                                <h3>{social.name}</h3>
+                                <p>{social.description}</p>
+                            </div>
                         ))}
                     </div>
 
@@ -48,6 +51,8 @@ const Contact = (props) => (
         </div>
     </div>
 );
+
+
 
 export default withRouter(
     withTheme(

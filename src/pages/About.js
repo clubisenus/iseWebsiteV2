@@ -9,6 +9,8 @@ import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
 import { iseclublogobanner } from '../resources/images';
+import aboutus from '../resources/images/Aboutuss.jpg';
+import { Height } from '@material-ui/icons';
 
 const mapStateToProps = state => {
     return {
@@ -37,7 +39,7 @@ const About = (props) => (
                         <h1>About Us</h1>
                     </header>
 
-                    <span class="image main"><img src={iseclublogobanner} alt="" /></span>
+                    <span class="image main" ><img style={{ width: "100%", objectFit: "cover" }} src={aboutus} alt="" /></span>
                     <hr class="major" />
 
                     <h2>NUS ISE Club</h2>

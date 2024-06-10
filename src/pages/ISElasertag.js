@@ -43,7 +43,9 @@ const ISElasertag = (props) => (
                         ))}
                     </Slide>
 
-                    <h3 style={{ marginTop: '20px' }}>{lasertag.description}</h3>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center', marginTop: '150px' }}>
+                        <h3>{lasertag.description}</h3>
+                    </div>
                     <hr className="major" />
                 </section>
             </div>

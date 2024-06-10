@@ -13,7 +13,6 @@ import About from "./pages/About";
 import MC18 from "./pages/MC18";
 //import MC19 from "./pages/MC19";
 //import MC20 from "./pages/MC20";
-import CareerTalk from "./pages/CareerTalk";
 import CIP from "./pages/CIP";
 import Contact from "./pages/Contact";
 import ISEDay from "./pages/ISEDay";
@@ -65,7 +64,6 @@ render(
           <Route path="/18mc" component={MC18} />
           <Route path="/blog" component={Blog} />
           <Route path="/bio" component={Bio} />
-          <Route path="/careertalk" component={CareerTalk} />
           <Route path="/cip" component={CIP} />
           <Route path="/contact" component={Contact} />
           <Route path="/iseday" component={ISEDay} />

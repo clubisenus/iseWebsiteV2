@@ -93,7 +93,7 @@ class LeftDrawer extends Component {
                     </ListItem>
                     <ListItem onClick={this.props.ToggleNavBar}>
                       <Link href={pageLinks.events.lasertag}>
-                        ISE Laser Tag
+                        ISE Special Events
                       </Link>
                     </ListItem>
                     <ListItem onClick={this.props.ToggleNavBar}>
@@ -112,11 +112,6 @@ class LeftDrawer extends Component {
                       </Link>
                     </ListItem>
                     <ListItem onClick={this.props.ToggleNavBar}>
-                      <Link href={pageLinks.events.careertalk}>
-                        ISE Industry and Career Talk
-                      </Link>
-                    </ListItem>
-                    <ListItem onClick={this.props.ToggleNavBar}>
                       <Link href={pageLinks.events.bacc}>
                         NUS ISE Business Analytics Case Competition
                       </Link>
@@ -124,10 +119,7 @@ class LeftDrawer extends Component {
                   </List>
                 </Collapse>
                 <ListItem onClick={this.props.ToggleNavBar}>
-                  <Link href={pageLinks.internal.shop}>Merchandise</Link>
-                </ListItem>
-                <ListItem onClick={this.props.ToggleNavBar}>
-                  <Link href={pageLinks.internal.sponsors}>Sponsorship</Link>
+                  <Link href={pageLinks.internal.sponsors}>Sponsorships</Link>
                 </ListItem>
                 <ListItem onClick={this.props.ToggleNavBar}>
                   <Link href={pageLinks.internal.contact}>Contact Us</Link>
@@ -167,11 +159,11 @@ class LeftDrawer extends Component {
               </header>
               <p>
                 Queries? Feedback? Feel free to reach out to us here! Or you can
-                DM us on Instagram ;)
+                DM us on Instagram :)
               </p>
               <ul className="contact">
                 <li className="icon solid fa-envelope">
-                  <a href={pageLinks.external.email}>info@nusiseclub.com</a>
+                  <a href={pageLinks.external.email}>club.ise.nus@gmail.com</a>
                 </li>
                 <li className="icon solid fa-home">
                   1 Engineering Drive 2, Blk E1A #06-25 <br />
@@ -180,13 +172,7 @@ class LeftDrawer extends Component {
               </ul>
             </section>
 
-            <footer id="footer">
-              <p className="copyright">
-                &copy; Untitled. All rights reserved. Demo Images:{" "}
-                <a href="https://unsplash.com">Unsplash</a>. Design:{" "}
-                <a href="https://html5up.net">HTML5 UP</a>.
-              </p>
-            </footer>
+            
           </div>
         </div>
       </SwipeableDrawer>

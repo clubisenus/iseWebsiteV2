@@ -54,7 +54,8 @@ const Sponsorship = (props) => {
         width: '1000px', // Bigger size for specific logos
         height: '1000px', // Bigger size for specific logos
         objectFit: 'contain', // Ensure the logo maintains aspect ratio and fits within the specified dimensions,
-        marginBottom: '-300px' // Adjust the distance between the logo and the name
+        marginBottom: '-300px', // Adjust the distance between the logo and the name
+        marginTop: '-400px' // Adjust the distance between the logo and the title
     };
 
     const nameStyle = {

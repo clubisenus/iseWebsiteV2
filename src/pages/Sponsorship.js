@@ -47,13 +47,13 @@ const Sponsorship = (props) => {
     const logoStyle = {
         width: '250px', // Default size for logos
         height: '250px', // Default size for logos
-        objectFit: 'contain' // Ensure the logo maintains aspect ratio and fits within the specified dimensions,
+        objectFit: 'contain' // Ensure the logo maintains aspect ratio and fits within the specified dimensions
     };
 
     const bigLogoStyle = {
         width: '1000px', // Bigger size for specific logos
         height: '1000px', // Bigger size for specific logos
-        objectFit: 'contain', // Ensure the logo maintains aspect ratio and fits within the specified dimensions,
+        objectFit: 'contain', // Ensure the logo maintains aspect ratio and fits within the specified dimensions
         marginBottom: '-300px', // Adjust the distance between the logo and the name
         marginTop: '-400px' // Adjust the distance between the logo and the title
     };
@@ -70,12 +70,37 @@ const Sponsorship = (props) => {
         textAlign: 'center'
     };
 
+    const mediaQueries = `
+        @media (max-width: 600px) {
+            .row {
+                flex-direction: column !important;
+                align-items: center;
+            }
+            .item {
+                margin: 10px 0 !important;
+            }
+            .name {
+                font-size: 1.2em;
+            }
+            .bigName {
+                font-size: 1.5em;
+            }
+            .bigLogo {
+                max-width: 250px;
+                height: 250px;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+        }
+    `;
+
     return (
         <div>
+            <style>{mediaQueries}</style>
             <LeftDrawer display={props.display} />
             <TopBar />
             <div id='main'>
-                <div className="inner">
+                <div className="inner container">
                     <section>
                         <header className="main">
                             <h1>Sponsorships</h1>
@@ -83,43 +108,46 @@ const Sponsorship = (props) => {
                         
                         <h2>Past Sponsors: </h2>
                         <div style={containerStyle}>
-                            <div style={rowStyle}>
+                            <div style={rowStyle} className="row">
                                 {sponsorships.slice(0, 1).map((sponsorship) => (
-                                    <div style={itemStyle} key={sponsorship.name}>
+                                    <div style={itemStyle} key={sponsorship.name} className="item">
                                         <img 
                                             style={sponsorship.name === 'Micron' ? bigLogoStyle : logoStyle} 
                                             src={sponsorship.logo} 
                                             alt={sponsorship.name} 
+                                            className={sponsorship.name === 'Micron' ? 'bigLogo' : ''}
                                         />
-                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle}>
+                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle} className={sponsorship.name === 'Micron' ? 'bigName' : 'name'}>
                                             {sponsorship.name}
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                            <div style={rowStyle}>
+                            <div style={rowStyle} className="row">
                                 {sponsorships.slice(1, 3).map((sponsorship) => (
-                                    <div style={itemStyle} key={sponsorship.name}>
+                                    <div style={itemStyle} key={sponsorship.name} className="item">
                                         <img 
                                             style={sponsorship.name === 'Micron' ? bigLogoStyle : logoStyle} 
                                             src={sponsorship.logo} 
                                             alt={sponsorship.name} 
+                                            className={sponsorship.name === 'Micron' ? 'bigLogo' : ''}
                                         />
-                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle}>
+                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle} className={sponsorship.name === 'Micron' ? 'bigName' : 'name'}>
                                             {sponsorship.name}
                                         </div>
                                     </div>
                                 ))}
                             </div>
-                            <div style={rowStyle}>
+                            <div style={rowStyle} className="row">
                                 {sponsorships.slice(3, 6).map((sponsorship) => (
-                                    <div style={itemStyle} key={sponsorship.name}>
+                                    <div style={itemStyle} key={sponsorship.name} className="item">
                                         <img 
                                             style={sponsorship.name === 'Micron' ? bigLogoStyle : logoStyle} 
                                             src={sponsorship.logo} 
                                             alt={sponsorship.name} 
+                                            className={sponsorship.name === 'Micron' ? 'bigLogo' : ''}
                                         />
-                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle}>
+                                        <div style={sponsorship.name === 'Micron' ? bigNameStyle : nameStyle} className={sponsorship.name === 'Micron' ? 'bigName' : 'name'}>
                                             {sponsorship.name}
                                         </div>
                                     </div>

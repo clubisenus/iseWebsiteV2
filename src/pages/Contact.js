@@ -22,6 +22,19 @@ const mapDispatchToProps = dispatch => {
 
 const Contact = (props) => (
     <div>
+        <style>
+            {`
+                @media (max-width: 600px) {
+                    .social-grid {
+                        grid-template-columns: 1fr !important;
+                        gap: 20px !important;
+                    }
+                    .social-item {
+                        margin-bottom: 20px !important;
+                    }
+                }
+            `}
+        </style>
         <LeftDrawer display={props.display} />
         <TopBar />
         <div id='main'>
@@ -33,9 +46,9 @@ const Contact = (props) => (
                     <hr className="major" />
 
                     <h2>You may reach out to us via</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '200px', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: "120px" }}>
+                    <div className="social-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '200px', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: "120px" }}>
                         {socials.map((social) => (
-                            <div key={social.name} style={{ textAlign: 'center' }}>
+                            <div key={social.name} className="social-item" style={{ textAlign: 'center' }}>
                                 <a href={social.link} target="_blank" rel="noopener noreferrer">
                                     <img src={social.icon} alt={social.name} style={{ width: '200px', height: '200px', marginBottom: '10px' }} />
                                 </a>
@@ -51,8 +64,6 @@ const Contact = (props) => (
         </div>
     </div>
 );
-
-
 
 export default withRouter(
     withTheme(

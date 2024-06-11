@@ -7,7 +7,7 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar';
 import LeftDrawer from '../components/LeftDrawer';
 import { writeups } from '../resources/committees';
-import committee from '../resources/images/committee.JPG'
+import committee from '../resources/images/committee.JPG';
 
 import {
   pic01, pic02, pic11, mc18banner, p18, vpi18, vpe18, gs18, fs18,
@@ -24,44 +24,112 @@ const mapDispatchToProps = dispatch => {
   return {};
 };
 
-const standardizedImageStyle = {
-  width: '200px', // Adjust to desired width
-  height: '250px', // Adjust to desired height
-  objectFit: 'cover', // Ensures the aspect ratio is maintained
-  borderRadius: '8px', // Optional: adds rounded corners
-  margin: '10px' // Optional: adds space around images
+const styles = {
+  standardizedImage: {
+    width: '100%',
+    height: 'auto',
+    objectFit: 'cover',
+    borderRadius: '8px',
+    margin: '10px 0',
+  },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '10px',
+    textAlign: 'center',
+  },
+  writeup: {
+    width: '100%',
+    maxWidth: '100%', 
+    boxSizing: 'border-box',
+  },
+  header: {
+    textAlign: 'center',
+    marginBottom: '20px',
+  },
+  mainImage: {
+    width: '100%',
+    height: 'auto',
+  },
+  mediaQueries: `
+    @media (max-width: 768px) {
+      .main {
+        padding: 10px;
+      }
+      
+      .image.main img {
+        width: 100%;
+        height: auto;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      h2 {
+        font-size: 1.2em;
+      }
+      
+      p {
+        font-size: 1em;
+        text-align: center;
+      }
+      
+      hr.major {
+        margin: 20px 0;
+      }
+    }
+    
+    @media (min-width: 769px) {
+      h1 {
+        font-size: 2em; // Adjust font size for desktop
+      }
+      
+      h2 {
+        font-size: 1.5em; // Adjust font size for desktop
+      }
+      
+      p {
+        font-size: 1.2em; // Adjust font size for desktop
+        text-align: left; // Optional: align text to left for readability
+      }
+      
+      hr.major {
+        margin: 30px 0;
+      }
+    }
+  `,
 };
 
 const MC18 = (props) => (
   <div>
+    <style>{styles.mediaQueries}</style>
     <LeftDrawer display={props.display} />
     <TopBar />
-    <div id="main">
+    <div id="main" style={{ width: '100%' }}>
       <div className="inner">
         <section>
-          <header className="main">
+          <header className="main" style={styles.header}>
             <h1>23rd Management Committee</h1>
           </header>
-          <span className="image main"><img src={committee} alt="" /></span>
-          <div>
+          <span className="image main"><img src={committee} alt="" style={styles.mainImage} /></span>
+          <div style={styles.container}>
             {writeups.map((writeup) => (
-              <React.Fragment key={writeup.position}>
+              <div key={writeup.position} style={styles.writeup}>
                 <hr className="major" />
-                <h2>{writeup.position}</h2> 
+                <h2>{writeup.position}</h2>
                 <p>
                   <span className={writeup.imageposition}>
                     <img 
                       src={writeup.image} 
                       alt="" 
-                      style={standardizedImageStyle}
+                      style={styles.standardizedImage}
                     />
                   </span>
-                  <br /><br /><br />
                   <strong>{writeup.name}</strong> {writeup.text}
-                  <br />
-                </p>  
-                <br/><br/>
-              </React.Fragment>             
+                </p>
+              </div>
             ))}
           </div>
         </section>

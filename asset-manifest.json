@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://nusiseclub.com/static/css/main.538c9500.css",
-    "main.js": "https://nusiseclub.com/static/js/main.58010e0f.js",
+    "main.js": "https://nusiseclub.com/static/js/main.35c4b8f0.js",
     "static/media/5.JPG": "https://nusiseclub.com/static/media/5.40b2abc2f2320a99d516.JPG",
     "static/media/6.JPG": "https://nusiseclub.com/static/media/6.b04593826bf72a029bd7.JPG",
     "static/media/8.JPG": "https://nusiseclub.com/static/media/8.2f4b52fa683d370971c9.JPG",
@@ -92,10 +92,10 @@
     "index.html": "https://nusiseclub.com/index.html",
     "static/media/email.svg": "https://nusiseclub.com/static/media/email.436a41ac9de9712e950ebdba01056477.svg",
     "main.538c9500.css.map": "https://nusiseclub.com/static/css/main.538c9500.css.map",
-    "main.58010e0f.js.map": "https://nusiseclub.com/static/js/main.58010e0f.js.map"
+    "main.35c4b8f0.js.map": "https://nusiseclub.com/static/js/main.35c4b8f0.js.map"
   },
   "entrypoints": [
     "static/css/main.538c9500.css",
-    "static/js/main.58010e0f.js"
+    "static/js/main.35c4b8f0.js"
   ]
 }

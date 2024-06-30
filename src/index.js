@@ -64,18 +64,18 @@ render(
           <Route path="/about" component={About} />
           <Route path="/23mc" component={MC18} />
           <Route path="/blog" component={Blog} />
-          <Route path="/bio" component={Bio} />
+          <Route path="/upcoming" component={Bio} />
           <Route path="/cip" component={CIP} />
           <Route path="/contact" component={Contact} />
           <Route path="/iseday" component={ISEDay} />
-          <Route path="/iselasertag" component={ISElasertag} />
+          <Route path="/specialevents" component={ISElasertag} />
           <Route path="/isenight" component={ISENight} />
           <Route path="/isefoc" component={ISEFOC} />
           <Route path="/isenightcycling" component={NightCycling} />
           <Route path="/nusisebacc" component={NUSISEBACC} />
           <Route path="/shop" component={Shop} />
           <Route path="/sponsorship" component={Sponsorship} />
-          <Route path="/welfare" component={Welfare} />
+          <Route path="/welfareday" component={Welfare} />
         </Switch>
       </Router>
     </ThemeProvider>

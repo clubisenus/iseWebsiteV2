@@ -53,6 +53,7 @@ const theme = createMuiTheme({
 });
 //TODO: map paths to components so that we can fully centralise this thing into pageLinks
 
+//update the link for management committee whenever there is a new one 
 render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
@@ -61,7 +62,7 @@ render(
           {/*add new route when adding new pages*/}
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/18mc" component={MC18} />
+          <Route path="/23mc" component={MC18} />
           <Route path="/blog" component={Blog} />
           <Route path="/bio" component={Bio} />
           <Route path="/cip" component={CIP} />

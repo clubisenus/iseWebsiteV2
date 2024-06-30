@@ -21,7 +21,7 @@ let pageLinks = {
     internal: {
         domain,
         about: domain + "about",
-        mc18: domain + "18mc",
+        mc18: domain + "23mc",
 		mc19: domain + "19mc",
 		mc20: domain + "20mc",
         blog: domain + "blog",

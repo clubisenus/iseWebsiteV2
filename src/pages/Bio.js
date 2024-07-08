@@ -2,12 +2,12 @@ import React from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-
 import { withTheme } from "@material-ui/styles";
+import { Slide } from "react-slideshow-image";
+import 'react-slideshow-image/dist/styles.css';
 
 import TopBar from "../components/TopBar";
 import LeftDrawer from "../components/LeftDrawer";
-
 import { upcoming } from "../resources/events";
 
 const mapStateToProps = (state) => {
@@ -18,6 +18,15 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {};
+};
+
+const formatDetails = (details) => {
+  return details.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      <br />
+    </React.Fragment>
+  ));
 };
 
 const Bio = (props) => {
@@ -38,11 +47,17 @@ const Bio = (props) => {
               {upcoming.map((event, index) => (
                 <article key={event.name} style={isSinglePost ? { width: '50%' } : {}}>
                   <div id="day">
-                    <a href={event.link} className="image">
-                      <img src={event.poster} alt={event.name} />
-                    </a>
+                    <div className="image">
+                      <Slide easing="ease">
+                        {event.poster.map((posterImage, idx) => (
+                          <div className="each-slide" key={idx}>
+                            <img src={posterImage} alt={`${event.name} poster ${idx + 1}`} />
+                          </div>
+                        ))}
+                      </Slide>
+                    </div>
                     <h3>{event.name}</h3>
-                    <p>{event.details}</p>
+                    <p>{formatDetails(event.details)}</p>
                     <ul className="actions">
                       <li>
                         <a href={event.link} className="button">

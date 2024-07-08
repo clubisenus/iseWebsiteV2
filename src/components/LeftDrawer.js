@@ -10,6 +10,8 @@ import {
   Link,
 } from "@material-ui/core";
 import { KeyboardArrowUp, KeyboardArrowDown } from "@material-ui/icons";
+import { Slide } from "react-slideshow-image";
+import 'react-slideshow-image/dist/styles.css';
 import pageLinks from "../resources/pageLinks";
 import { upcoming } from "../resources/events";
 import styled from "styled-components";
@@ -79,6 +81,15 @@ class LeftDrawer extends Component {
     this.setState((state) => ({
       showEvents: !state.showEvents,
     }));
+  }
+
+  formatDetails(details) {
+    return details.split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
   }
 
   render() {
@@ -166,7 +177,7 @@ class LeftDrawer extends Component {
               </List>
             </nav>
 
-            <br/> 
+            <br/>
             <br/>
 
             <section>
@@ -177,11 +188,17 @@ class LeftDrawer extends Component {
                 {upcoming.map((event) => (
                   <article key={event.name}>
                     <div id="day">
-                      <a href={event.link} className="image">
-                        <Img src={event.poster} alt={event.name} />
-                      </a>
+                      <div className="image">
+                        <Slide easing="ease">
+                          {event.poster.map((posterImage, idx) => (
+                            <div className="each-slide" key={idx}>
+                              <Img src={posterImage} alt={`${event.name} poster ${idx + 1}`} />
+                            </div>
+                          ))}
+                        </Slide>
+                      </div>
                       <h3>{event.name}</h3>
-                      <p>{event.details}</p>
+                      <p>{this.formatDetails(event.details)}</p>
                       <ul className="actions">
                         <li>
                           <a href={event.link} className="button">

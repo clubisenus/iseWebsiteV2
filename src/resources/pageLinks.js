@@ -21,11 +21,11 @@ let pageLinks = {
     internal: {
         domain,
         about: domain + "about",
-        mc18: domain + "18mc",
+        mc18: domain + "23mc",
 		mc19: domain + "19mc",
 		mc20: domain + "20mc",
         blog: domain + "blog",
-        bio:domain + "bio",
+        bio:domain + "upcoming",
         shop: domain + "shop",
         sponsors: domain + "sponsorship",
         contact: domain + "contact"
@@ -35,11 +35,11 @@ let pageLinks = {
         day: domain + "iseday",
         night: domain + "isenight",
         cycling: domain + "isenightcycling",
-        welfare: domain + "welfare",
+        welfare: domain + "welfareday",
         cip: domain + "cip",
         careertalk: domain + "careertalk",
         bacc: domain + "nusisebacc",
-        lasertag: domain + "iselasertag"    
+        lasertag: domain + "specialevents"    
     }
 }
 export default pageLinks

@@ -16,7 +16,7 @@ export const writeups = [
     {
         name: "Alicia Chia",
         position: "Vice President (Internal)",
-        text:"is responsible for ensuring that all ISE Club members are well taken care of and looks out for their interests. Alicia is also responsible for fostering cohesion within ISE Club, so do drop her a message on Telegram if you have any cohesion activities in mind!",
+        text:"is responsible for ensuring that all ISE Club members are well taken care of and looks out for their interests. Working closely with the president, she ensures that our events are aligned with the guidelines by NUS and oversee the management of the Personal Data Protection Act (PDPA) within the club. She is also in-charge of fostering cohesion within ISE Club and helps everyone to be involved in the events, so do drop her a message on Telegram if you have any cohesion activities in mind!",
         image: alicia,
         imageposition: "image rightmc"
     },

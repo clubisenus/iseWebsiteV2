@@ -215,29 +215,10 @@ export const frontpage = [
 
 export const upcoming = [
   {
-    name: "ISE Club 23rd MC Recruitment",
+    name: "",
     poster: [
-      recruitment1,
-      recruitment2,
-      recruitment3,
-      recruitment4,
-      recruitment5,
     ],
-    details: `📣 Attention all ISE Freshmen and Year 2s! 📣
-
-Ready to make your mark? The recruitment for the 23rd ISE Club Management Committee is OPEN until July 19, 2024. Don't miss out!
-
-
-What's the NUS ISE Club Management Committee all about?
-The NUS ISE Club Management Committee is the heart of the ISE undergraduate community. We represent and advocate for all ISE students, fostering a dynamic and inclusive environment through a variety of events and initiatives.
-
-Why should you join?
-Being part of the ISE Club is more than just a role – it's a journey of self-discovery and growth. Whether you're passionate about leadership, event planning, creative thinking, or helping others, there's a place for you here. You'll develop valuable skills, build lasting friendships, and become part of a supportive and vibrant community.
-
-Got questions? Feel free to contact Aldi (@ReinaldiKR) / Bryan (@beeeeteee) on Telegram\n
-SIGN UP TO BE PART OF THE 22nd ISE MC:`
-
-,
-    link: "https://forms.office.com/pages/responsepage.aspx?id=Xu-lWwkxd06Fvc_rDTR-gnglDAnES2FLkUs8MBTvYK5UNDFEUUQ5RkdRWTRZSDRMMUZES0ZQTTI3OS4u",
+    details: "",
+    link: "",
   },
 ];

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { withTheme } from "@material-ui/styles";
 import { Slide } from "react-slideshow-image";
-import 'react-slideshow-image/dist/styles.css';
+import "react-slideshow-image/dist/styles.css";
 
 import TopBar from "../components/TopBar";
 import LeftDrawer from "../components/LeftDrawer";
@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const formatDetails = (details) => {
-  return details.split('\n').map((line, index) => (
+  return details.split("\n").map((line, index) => (
     <React.Fragment key={index}>
       {line}
       <br />
@@ -31,7 +31,9 @@ const formatDetails = (details) => {
 
 const Bio = (props) => {
   const isSinglePost = upcoming.length === 1;
-  const postContainerStyle = isSinglePost ? { display: 'flex', justifyContent: 'center' } : {};
+  const postContainerStyle = isSinglePost
+    ? { display: "flex", justifyContent: "center" }
+    : {};
 
   return (
     <div>
@@ -45,31 +47,63 @@ const Bio = (props) => {
             </header>
             <div className="posts" style={postContainerStyle}>
               {upcoming.map((event, index) => (
-                <article key={event.name} style={isSinglePost ? { width: '50%' } : {}}>
+                <article
+                  key={event.name || "fallback"}
+                  style={isSinglePost ? { width: "50%" } : {}}
+                >
                   <div id="day">
                     <div className="image">
-                      <Slide easing="ease">
-                        {event.poster.map((posterImage, idx) => (
-                          <div className="each-slide" key={idx}>
-                            <img src={posterImage} alt={`${event.name} poster ${idx + 1}`} />
-                          </div>
-                        ))}
-                      </Slide>
+                      {event.poster && event.poster.length > 0 && (
+                        <Slide easing="ease">
+                          {event.poster.map((posterImage, idx) => (
+                            <div className="each-slide" key={idx}>
+                              <img
+                                src={posterImage}
+                                alt={`${event.name || "Event"} poster ${
+                                  idx + 1
+                                }`}
+                              />
+                            </div>
+                          ))}
+                        </Slide>
+                      )}
                     </div>
-                    <h3>{event.name}</h3>
+                    <h3>{event.name || "Stay tuned for updates!"}</h3>
                     <p>{formatDetails(event.details)}</p>
                     <ul className="actions">
-                      <li>
-                        <a href={event.link} className="button">
-                          Sign Up
-                        </a>
-                      </li>
+                      {event.link && (
+                        <li>
+                          <a href={event.link} className="button">
+                            Sign Up
+                          </a>
+                        </li>
+                      )}
                     </ul>
                   </div>
                 </article>
               ))}
             </div>
           </section>
+          {upcoming.length === 0 && (
+            <section
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                textAlign: "center",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "3rem", // Adjust this if needed
+                  fontWeight: "bold",
+                }}
+              >
+                Stay tuned for updates!
+              </div>
+            </section>
+          )}
         </div>
       </div>
     </div>

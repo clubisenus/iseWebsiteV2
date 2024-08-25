@@ -181,44 +181,48 @@ class LeftDrawer extends Component {
             <br />
 
             <section>
-  <Header className="major">
-    <h2>Upcoming Events</h2>
-  </Header>
-  <div className="mini-posts">
-    {upcoming.map((event) => (
-      <article key={event.name || 'fallback'}>
-        <div id="day">
-          <div className="image">
-            {/* Render Slide component only if event.poster is not empty */}
-            {event.poster && event.poster.length > 0 && (
-              <Slide easing="ease">
-                {event.poster.map((posterImage, idx) => (
-                  <div className="each-slide" key={idx}>
-                    <Img src={posterImage} alt={`${event.name || 'Event'} poster ${idx + 1}`} />
-                  </div>
+              <Header className="major">
+                <h2>Upcoming Events</h2>
+              </Header>
+              <div className="mini-posts">
+                {upcoming.map((event) => (
+                  <article key={event.name || "fallback"}>
+                    <div id="day">
+                      <div className="image">
+                        {/* Render Slide component only if event.poster is not empty */}
+                        {event.poster && event.poster.length > 0 && (
+                          <Slide easing="ease">
+                            {event.poster.map((posterImage, idx) => (
+                              <div className="each-slide" key={idx}>
+                                <Img
+                                  src={posterImage}
+                                  alt={`${event.name || "Event"} poster ${
+                                    idx + 1
+                                  }`}
+                                />
+                              </div>
+                            ))}
+                          </Slide>
+                        )}
+                      </div>
+                      {/* If event.name is empty, display "Stay tuned for updates!" */}
+                      <h3>{event.name || "Stay tuned for updates!"}</h3>
+                      <p>{this.formatDetails(event.details)}</p>
+                      <ul className="actions">
+                        {/* Render Sign Up button only if event.link is not empty */}
+                        {event.link && (
+                          <li>
+                            <a href={event.link} className="button">
+                              Sign Up
+                            </a>
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  </article>
                 ))}
-              </Slide>
-            )}
-          </div>
-          {/* If event.name is empty, display "Stay tuned for updates!" */}
-          <h3>{event.name || "Stay tuned for updates!"}</h3>
-          <p>{this.formatDetails(event.details)}</p>
-          <ul className="actions">
-            {/* Render Sign Up button only if event.link is not empty */}
-            {event.link && (
-              <li>
-                <a href={event.link} className="button">
-                  Sign Up
-                </a>
-              </li>
-            )}
-          </ul>
-        </div>
-      </article>
-    ))}
-  </div>
-</section>
-
+              </div>
+            </section>
 
             <section>
               <Header className="major">

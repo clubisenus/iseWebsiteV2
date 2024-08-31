@@ -7,7 +7,7 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar';
 import LeftDrawer from '../components/LeftDrawer';
 import { writeups } from '../resources/committees';
-import committee from '../resources/images/committee.jpg';
+import committee from '../resources/images/committee.JPG';
 
 import {
   pic01, pic02, pic11, mc18banner, p18, vpi18, vpe18, gs18, fs18,

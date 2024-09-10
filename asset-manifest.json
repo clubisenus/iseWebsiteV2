@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://nusiseclub.com/static/css/main.6d8e0afc.css",
-    "main.js": "https://nusiseclub.com/static/js/main.b863ae44.js",
+    "main.js": "https://nusiseclub.com/static/js/main.56e7bd98.js",
     "static/media/5.JPG": "https://nusiseclub.com/static/media/5.40b2abc2f2320a99d516.JPG",
     "static/media/6.JPG": "https://nusiseclub.com/static/media/6.b04593826bf72a029bd7.JPG",
     "static/media/8.JPG": "https://nusiseclub.com/static/media/8.2f4b52fa683d370971c9.JPG",
@@ -73,6 +73,7 @@
     "static/media/ISEDay.jpg": "https://nusiseclub.com/static/media/ISEDay.bed840c5d4fe29798869.jpg",
     "static/media/15.jpg": "https://nusiseclub.com/static/media/15.dd58d1aabec5cea446c7.jpg",
     "static/media/21.jpg": "https://nusiseclub.com/static/media/21.9143f329d9ade5778658.jpg",
+    "static/media/AlumniSeries.jpg": "https://nusiseclub.com/static/media/AlumniSeries.2408b51d105ffacc362d.jpg",
     "static/media/WelfarePoster.jpg": "https://nusiseclub.com/static/media/WelfarePoster.ff4a35870f6c31e60abf.jpg",
     "static/media/11.jpg": "https://nusiseclub.com/static/media/11.b3f4178c5a5a881742f4.jpg",
     "static/media/pic11.jpg": "https://nusiseclub.com/static/media/pic11.134ee4339e33675492ee.jpg",
@@ -104,10 +105,10 @@
     "index.html": "https://nusiseclub.com/index.html",
     "static/media/email.svg": "https://nusiseclub.com/static/media/email.436a41ac9de9712e950ebdba01056477.svg",
     "main.6d8e0afc.css.map": "https://nusiseclub.com/static/css/main.6d8e0afc.css.map",
-    "main.b863ae44.js.map": "https://nusiseclub.com/static/js/main.b863ae44.js.map"
+    "main.56e7bd98.js.map": "https://nusiseclub.com/static/js/main.56e7bd98.js.map"
   },
   "entrypoints": [
     "static/css/main.6d8e0afc.css",
-    "static/js/main.b863ae44.js"
+    "static/js/main.56e7bd98.js"
   ]
 }

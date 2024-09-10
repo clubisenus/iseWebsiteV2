@@ -5,8 +5,16 @@ import WelfareDay from "../upcomingEvents/WelfareDay.jpg";
 import CIP from "../upcomingEvents/CIP.jpg";
 import FOC from "../upcomingEvents/FOC.jpg";
 import SpecialEvents from "../upcomingEvents/SpecialEvents.jpg";
+import AlumniSeries from "../upcomingEvents/AlumniSeries.jpg"
 
 export const upcomingTimeline = [
+  {
+    title:"Alumni Series",
+    date:"November 2024",
+    specifics:"Week 12",
+    picture:AlumniSeries,
+    route:"/iseday"
+  },
   {
     title: "ISE Welfare Day",
     date: "November 2024",
@@ -21,13 +29,7 @@ export const upcomingTimeline = [
     picture: NightCycling,
     route: "/isenightcycling",
   },
-  {
-    title: "Community Involvement Project",
-    date: "September 2024",
-    specfics: "Recess Week",
-    picture: CIP,
-    route: "/cip",
-  },
+  
   {
     title: "Semester 2",
     date: "",
@@ -36,7 +38,14 @@ export const upcomingTimeline = [
     route: "",
   },
   {
-    title: "ISE Day + Alumni Series",
+    title: "Community Involvement Project",
+    date: "January 2024",
+    specfics: "Recess Week",
+    picture: CIP,
+    route: "/cip",
+  },
+  {
+    title: "ISE Day",
     date: "Feburary 2025",
     specfics: "",
     picture: ISEDay,

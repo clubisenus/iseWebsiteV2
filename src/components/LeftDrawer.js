@@ -8,13 +8,18 @@ import {
   ListItem,
   Collapse,
   Link,
+  Modal,
+  Backdrop,
+  Fade,
+  Button,
 } from "@material-ui/core";
 import { KeyboardArrowUp, KeyboardArrowDown } from "@material-ui/icons";
-import { Slide } from "react-slideshow-image";
-import "react-slideshow-image/dist/styles.css";
-import pageLinks from "../resources/pageLinks";
-import { upcoming } from "../resources/events";
 import styled from "styled-components";
+import Lottie from "lottie-react";
+import animation from "../resources/animations/WelfareDay.json";
+import pageLinks from "../resources/pageLinks";
+import bannerpic from "../upcomingEvents/banner.png";
+import { upcomingEvent } from "../upcomingEvents/index.js";
 
 const mapStateToProps = (state) => {
   return {
@@ -53,16 +58,55 @@ const Header = styled.header`
   }
 `;
 
-const Img = styled.img`
-  max-width: 100%;
-  height: auto;
-`;
-
 const ContactLi = styled.li`
   font-size: 0.9rem;
 
   @media (max-width: 600px) {
     font-size: 0.8rem;
+  }
+`;
+
+const Banner = styled.img`
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+`;
+
+const Description = styled.p`
+  font-size: 1.1em;
+  padding: 20px;
+  text-align: center;
+`;
+
+const ModalContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  outline: none;
+  padding: 20px;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+`;
+
+const CustomButton = styled(Button)`
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+
+  &:hover {
+    background-color: #0056b3;
   }
 `;
 
@@ -72,9 +116,17 @@ class LeftDrawer extends Component {
 
     this.state = {
       showEvents: false,
+      hover: false, // Hover state to track mouse hover
+      isModalOpen: false, // Modal open state
     };
 
+    this.animationRef = React.createRef(); // Ref for the Lottie animation
+
     this.ToggleEvents = this.ToggleEvents.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    this.handleLottieClick = this.handleLottieClick.bind(this);
+    this.handleModalClose = this.handleModalClose.bind(this);
   }
 
   ToggleEvents() {
@@ -83,13 +135,28 @@ class LeftDrawer extends Component {
     }));
   }
 
-  formatDetails(details) {
-    return details.split("\n").map((line, index) => (
-      <React.Fragment key={index}>
-        {line}
-        <br />
-      </React.Fragment>
-    ));
+  handleMouseEnter() {
+    if (this.animationRef.current) {
+      this.animationRef.current.play(); // Play animation on hover
+    }
+  }
+
+  handleMouseLeave() {
+    if (this.animationRef.current) {
+      this.animationRef.current.stop(); // Stop animation on mouse leave
+    }
+  }
+
+  handleLottieClick() {
+    this.setState({ isModalOpen: true }); // Open modal on Lottie click
+  }
+
+  handleModalClose() {
+    this.setState({ isModalOpen: false }); // Close modal
+  }
+
+  handleButtonClick() {
+    window.open(upcomingEvent.link, "_blank");
   }
 
   render() {
@@ -184,43 +251,20 @@ class LeftDrawer extends Component {
               <Header className="major">
                 <h2>Upcoming Events</h2>
               </Header>
-              <div className="mini-posts">
-                {upcoming.map((event) => (
-                  <article key={event.name || "fallback"}>
-                    <div id="day">
-                      <div className="image">
-                        {/* Render Slide component only if event.poster is not empty */}
-                        {event.poster && event.poster.length > 0 && (
-                          <Slide easing="ease">
-                            {event.poster.map((posterImage, idx) => (
-                              <div className="each-slide" key={idx}>
-                                <Img
-                                  src={posterImage}
-                                  alt={`${event.name || "Event"} poster ${
-                                    idx + 1
-                                  }`}
-                                />
-                              </div>
-                            ))}
-                          </Slide>
-                        )}
-                      </div>
-                      {/* If event.name is empty, display "Stay tuned for updates!" */}
-                      <h3>{event.name || "Stay tuned for updates!"}</h3>
-                      <p>{this.formatDetails(event.details)}</p>
-                      <ul className="actions">
-                        {/* Render Sign Up button only if event.link is not empty */}
-                        {event.link && (
-                          <li>
-                            <a href={event.link} className="button">
-                              Sign Up
-                            </a>
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-                  </article>
-                ))}
+              <div
+                className="mini-posts"
+                onMouseEnter={this.handleMouseEnter} // Start animation on hover
+                onMouseLeave={this.handleMouseLeave} // Stop animation when hover ends
+                onClick={this.handleLottieClick} // Open modal on click
+                style={{ cursor: "pointer" }}
+              >
+                <Lottie
+                  lottieRef={this.animationRef} // Ref to control the Lottie animation
+                  animationData={animation}
+                  loop
+                  autoplay={false} // Prevent autoplay
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
             </section>
 
@@ -242,6 +286,32 @@ class LeftDrawer extends Component {
                 </ContactLi>
               </ul>
             </section>
+
+            {/* Modal */}
+            <Modal
+              open={this.state.isModalOpen}
+              onClose={this.handleModalClose}
+              closeAfterTransition
+              BackdropComponent={Backdrop}
+              BackdropProps={{
+                timeout: 500,
+              }}
+            >
+              <Fade in={this.state.isModalOpen}>
+                <ModalContainer>
+                  <Banner src={bannerpic} alt="Upcoming Event Banner" />
+                  <h2>{upcomingEvent.title}</h2>
+                  <Description>{upcomingEvent.description}</Description>
+                  <ButtonContainer>
+                    <CustomButton onClick={this.handleButtonClick}>
+                      Click here to sign up!
+                    </CustomButton>
+                  </ButtonContainer>
+                  <br />
+                  <Button onClick={this.handleModalClose}>Close</Button>
+                </ModalContainer>
+              </Fade>
+            </Modal>
           </div>
         </Sidebar>
       </SwipeableDrawer>

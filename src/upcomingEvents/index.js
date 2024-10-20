@@ -5,15 +5,16 @@ import WelfareDay from "../upcomingEvents/WelfareDay.jpg";
 import CIP from "../upcomingEvents/CIP.jpg";
 import FOC from "../upcomingEvents/FOC.jpg";
 import SpecialEvents from "../upcomingEvents/SpecialEvents.jpg";
-import AlumniSeries from "../upcomingEvents/AlumniSeries.jpg"
+import AlumniSeries from "../upcomingEvents/AlumniSeries.jpg";
+import upcomingbanner from "../upcomingEvents/banner.png";
 
 export const upcomingTimeline = [
   {
-    title:"Alumni Series",
-    date:"November 2024",
-    specifics:"Week 12",
-    picture:AlumniSeries,
-    route:"/iseday"
+    title: "Alumni Series",
+    date: "November 2024",
+    specifics: "Week 12",
+    picture: AlumniSeries,
+    route: "/iseday",
   },
   {
     title: "ISE Welfare Day",
@@ -29,7 +30,7 @@ export const upcomingTimeline = [
     picture: NightCycling,
     route: "/isenightcycling",
   },
-  
+
   {
     title: "Semester 2",
     date: "",
@@ -80,3 +81,10 @@ export const upcomingTimeline = [
     route: "/isefoc",
   },
 ];
+
+export const upcomingEvent = {
+  title: "ISE Welfare Day",
+  description: "Test",
+  banner: upcomingbanner,
+  link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+};

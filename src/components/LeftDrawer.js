@@ -156,7 +156,9 @@ class LeftDrawer extends Component {
   }
 
   handleButtonClick() {
-    window.open(upcomingEvent.link, "_blank");
+    upcomingEvent.link.forEach((url) => {
+      window.open(url, "_blank");
+    });
   }
 
   render() {

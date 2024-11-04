@@ -84,7 +84,17 @@ export const upcomingTimeline = [
 
 export const upcomingEvent = {
   title: "ISE Welfare Day",
-  description: "Test",
+  description: `Hi ISE Fam! 🎉 This semester, we’re combining the ISE Welfare Pack Giveaway and our Merch Sale! Need a boost for finals? Grab an exclusive Welfare Pack filled with snacks, drinks, and vouchers (first-come, first-serve!). And don’t miss our ISE Merch Drop 24/25—refresh your wardrobe with hoodies, windbreakers, dri-fit T-shirts, and more! Spend $50+ and get a FREE gift!
+
+📅 Event Details:
+Date: 12-15 November 2024 | Location: E4 Level 4
+
+Merch: optimISE Shirt ($15, 2 for $25), Windbreaker ($25), Dri-Fit T-shirt ($10, 3 for $25), Cotton T-shirt ($6), Hoodie ($18).
+
+Sign up for Welfare Packs and order merch now! We look forward to seeing you there! 😄 – ISE Welfare & Merch Committee`,
   banner: upcomingbanner,
-  link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  link: [
+    "https://forms.office.com/Pages/ResponsePage.aspx?id=Xu-lWwkxd06Fvc_rDTR-ghiO86rRsQJKp4fJ0CumftVUNVhGTEdCQzQ5WFczUEwwMkw2Rlk3SEY4Mi4u",
+    "https://nus.campuslabs.com/engage/submitter/form/start/661288",
+  ],
 };

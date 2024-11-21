@@ -16,7 +16,7 @@ import {
 import { KeyboardArrowUp, KeyboardArrowDown } from "@material-ui/icons";
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import animation from "../resources/animations/WelfareDay.json";
+import animation from "../resources/animations/NightCycling.json";
 import pageLinks from "../resources/pageLinks";
 import bannerpic from "../upcomingEvents/banner.png";
 import { upcomingEvent } from "../upcomingEvents/index.js";

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://nusiseclub.com/static/css/main.6d8e0afc.css",
-    "main.js": "https://nusiseclub.com/static/js/main.e76173c8.js",
+    "main.js": "https://nusiseclub.com/static/js/main.426046f3.js",
     "static/media/5.JPG": "https://nusiseclub.com/static/media/5.40b2abc2f2320a99d516.JPG",
     "static/media/6.JPG": "https://nusiseclub.com/static/media/6.b04593826bf72a029bd7.JPG",
     "static/media/8.JPG": "https://nusiseclub.com/static/media/8.2f4b52fa683d370971c9.JPG",
@@ -41,7 +41,7 @@
     "static/media/ncpd18.jpg": "https://nusiseclub.com/static/media/ncpd18.094295714b22bac28650.jpg",
     "static/media/vpe18.jpg": "https://nusiseclub.com/static/media/vpe18.5b16a692a849598d4f68.jpg",
     "static/media/wpd18.jpg": "https://nusiseclub.com/static/media/wpd18.38282d43190b540feaf7.jpg",
-    "static/media/committee.jpg": "https://nusiseclub.com/static/media/committee.fdd3dfd2f80076463aa7.jpg",
+    "static/media/committee.JPG": "https://nusiseclub.com/static/media/committee.fdd3dfd2f80076463aa7.JPG",
     "static/media/ISENC2019.png": "https://nusiseclub.com/static/media/ISENC2019.80df7de2e0999de9b451.png",
     "static/media/fs18.jpg": "https://nusiseclub.com/static/media/fs18.183ca87544001b1e6bb1.jpg",
     "static/media/p19.jpg": "https://nusiseclub.com/static/media/p19.cda07dd4d862e8cbcae4.jpg",
@@ -106,10 +106,10 @@
     "index.html": "https://nusiseclub.com/index.html",
     "static/media/email.svg": "https://nusiseclub.com/static/media/email.436a41ac9de9712e950ebdba01056477.svg",
     "main.6d8e0afc.css.map": "https://nusiseclub.com/static/css/main.6d8e0afc.css.map",
-    "main.e76173c8.js.map": "https://nusiseclub.com/static/js/main.e76173c8.js.map"
+    "main.426046f3.js.map": "https://nusiseclub.com/static/js/main.426046f3.js.map"
   },
   "entrypoints": [
     "static/css/main.6d8e0afc.css",
-    "static/js/main.e76173c8.js"
+    "static/js/main.426046f3.js"
   ]
 }
